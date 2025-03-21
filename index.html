@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Training Manual - Documentation</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/style.css" type="text/css"  media="all">
+	<link rel="stylesheet" href="css/custome.css" type="text/css"  media="all">
+	<link rel="stylesheet" href="css/print.css" type="text/css"  media="print">
+	<!--<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css"> -->
+	
+	<link href="http://fonts.googleapis.com/css?family=Yu Gothic:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	
+	<!-- Google Translate API -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en', includedLanguages: 'ja,en', autoDisplay: false},
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+	<style>
+		/* General Styles */
+		body {
+			font-family: 'Roboto', sans-serif, 'Yu Gothic', 'YuGothic';
+			line-height: 1.6;
+			color: #333;
+		}
+
+		/* Increase font size for normal list items */
+		ul li, ol li,a {
+			font-size: 14px; 
+			margin-bottom: 10px;
+		}
+
+		/* Style for checklist headers */
+		.checklist_header {
+			font-size: 18px; /* Slightly larger for headers */
+			font-weight: bold;
+			color: #2c3e50;
+		}
+
+		/* Add some padding and margin to sections */
+		section {
+			margin-bottom: 30px;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Style for links */
+		a {
+			color: #3498db;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		/* Style for checkboxes */
+		input[type="checkbox"] {
+			margin-right: 10px;
+		}
+
+		/* Style for the side menu */
+		/* #side-nav {
+			background-color: #2c3e50;
+			padding: 20px;
+			border-radius: 8px;
+			color: #fff;
+		}
+
+		#side-nav a {
+			color: #fff;
+		}
+
+		#side-nav a:hover {
+			color: #3498db;
+		} */
+
+		/* Style for the header */
+		#header-sm {
+			background-color: #3498db;
+			color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			margin-bottom: 20px;
+		}
+
+		#header-sm h4, #header-sm h5 {
+			margin: 0;
+		}
+
+		/* Style for the main content */
+		/* #wrap {
+			padding: 20px;
+		} */
+		#wrap {
+			display: none; /* Hide content initially */
+		}
+
+		/* Style for the footer */
+		.white-space {
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Loader -->
+	<div id="loader">
+		<img src="image/loader.gif" alt="Loading..." />
+	</div>
+	<!-- START-BODY WRAP CONTENT -->	
+	<div id="wrap" class="colorskin-0">	
+	<!-- Language Switcher -->
+	
+
+	<div id="google_translate_element" style="display: none;"></div> <!-- Hidden Google Translate UI -->
+
+		<!-- START-MAIN CONTAINER -->	
+		<section class="container">
+			<div class="row">
+				<!-- <div id="google_translate_element"></div> -->
+
+				<!--START-SIDE MENU-->
+				<div class="col-md-3" id="sticky-sidebar">
+					<div class="logo"> <img src="image/mti-logo.png"  id="img-logo" alt="logo"> </div>
+					<aside id="side-nav">						
+						
+						<ul id="top-menu">
+							
+							<!-- Home -->
+							<li><a href="#Home">ホーム</a></li>
+							
+							<!-- Introduction -->
+							<li><a href="#Introduction">トレーニングマニュアルとは</a></li>
+
+							<!--Purpose-->
+							<li><a href="#Purpose">Purpose</a></li>
+
+							<!--Purpose-->
+							<li><a href="#ExpectedResults">Expected Results</a></li>
+
+							<!--Checklist-->
+							<!-- <li id="Checklist" style="background: url(css/img/back-to-buttom.png) no-repeat scroll right center rgba(0, 0, 0, 0); padding-bottom: 5px;">
+								<a href="#">Checklist</a>
+								<ul id="Checklist_id" class="item-hide">
+									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
+									<li><a href="#SoftSkillTraining">Soft Skill Training</a></li>									
+								</ul>
+							</li>							 -->
+							<!-- <li id="Checklist" style="background: url(css/img/back-to-buttom.png) no-repeat scroll right center rgba(0, 0, 0, 0); padding-bottom: 5px;">Checklist								
+								<ul id="Checklist_id" style="display:none;">									
+									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
+									<li><a href="#SoftSkillTraining">Soft Skill Training</a></li>									
+								</ul>
+							</li>	 -->
+							<!-- Checklist Menu -->
+							<li id="Checklist">
+								<a href="" id="Checklist_toggle">Checklist</a>
+								<ul id="Checklist_id" class="submenu" style="display:none;">
+									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
+									<li><a href="#SoftSkillTraining">Soft Skill Training</a></li>
+								</ul>
+							</li>	
+
+							<!-- Study Materials Menu -->
+							<li id="material">
+								<a href="" id="material-toggle">Study Materials</a>
+								<ul id="material-id" class="submenu" style="display:none;">
+									<li><a href="#DevSkillDevelopment">Dev Skill Development</a></li>
+									<li><a href="#PMSkillDevelopment">PM Skill Development</a></li>
+								</ul>
+							</li>
+
+							<li id="manuals">
+								<a href="" id="manuals-toggle">Training Manuals</a>
+								<ul id="manuals-id" class="submenu" style="display:none;">
+									<li><a href="" target="_blank">PM Training Manual</a></li>
+									<li><a href="" target="_blank">PL Training Manual</a></li>
+									<li><a href="./manual/test.html" target="_blank">Test Manual</a></li>
+								</ul>
+							</li>
+
+							<!-- Introduction -->
+							<li><a href="#Conclusion">Conclusion</a></li>
+						</ul>
+					</aside>
+				</div>
+				<!--END-SIDE MENU-->
+
+				<!--START-BODY CONTENT-->
+				<div class="col-md-9">
+					<div id="header" class="row">								
+						<div class="col-md-8 col-md-offset-1 desc" style="text-align: left; margin: 10px 0px 0px 0px;">
+							<h4 class="slight">Training Manual</h4>					
+						</div>
+						<div class="col-md-3" style="float: right; padding-top: 5px;">
+							<div style="text-align: right; padding: 10px;">
+								<!-- <label for="language-select">Language: </label> -->
+								<select id="language-select">
+									<option value="en">English</option>
+									<option value="ja" selected>Japanese</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="body-content">
+						<!-- Home page -->
+						<Section id="Home" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+							<h1><strong>Training Manual</strong></h1>
+							<h4>Prepared by: ITA</h4>
+						</Section>
+						
+						<!-- Introduction -->
+						<Section id="Introduction" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+							<h1><strong>トレーニングマニュアルとは</strong></h1>
+							<p align=justify>このトレーニングマニュアルは、新しい開発者が当社の開発プロセス、ツール、ベストプラクティスに迅速に適応できるよう設計されています。コーディング標準、バージョン管理、アジャイル手法、セキュリティ対策に関する体系的なガイダンスを提供することで、開発の一貫性と効率性を確保し、スムーズなワークフローを実現します。特に、当社の開発環境に特化したベストプラクティスを明確に示すことで、新しい開発者が戸惑うことなく業務に取り組めるよう配慮しています。</p>
+<p align = justify>このマニュアルに従うことで、開発者は学習曲線を短縮し、スキルの習得を加速させるとともに、生産性の向上が期待できます。また、チームとの円滑な連携が促進されることで、プロジェクト全体の品質向上にも貢献します。さらに、統一された開発手法を採用することで、エラーの削減や保守性の向上が図られ、長期的な視点でのソフトウェア開発の効率化にも寄与します。本マニュアルを活用し、スムーズなオンボーディングと継続的な成長を実現してください。
+							
+							</p>
+							
+						</Section>
+
+						<!--Purpose-->
+						<section id="Purpose">	
+							<br />
+							<h3><strong>目的:</strong></h3>
+							<ul>
+								<ul>
+									<li>
+										<ol>
+											<li>
+												<strong class="checklist_header">より迅速なオンボーディング</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														新しいチームメンバーが、当社の開発プロセス、ツール、ベストプラクティスを短期間で理解し、スムーズに業務を開始できるよう支援します。効率的なオンボーディングによって、新人の学習時間を短縮し、より早く実務に貢献できる環境を整えます。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">知識の標準化</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														すべての開発者がコーディング標準、バージョン管理、プロジェクト管理手法を統一して理解し、一貫した品質で開発を進められるようにします。個々の開発者の経験やスキルの違いにかかわらず、全員が同じ基準に沿って作業できることで、チーム全体の開発効率が向上します。
+													</li>
+												</ul>
+											</li>		
+											<li>
+												<strong class="checklist_header">コードの品質と保守性の確保</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														クリーンで効率的かつスケーラブルなコードを書くためのベストプラクティスを確立し、コードの可読性や保守性を向上させます。これにより、将来的な機能追加やバグ修正が容易になり、長期的な開発コストの削減にもつながります。
+													</li>
+												</ul>
+											</li>	
+											<li>
+												<strong class="checklist_header">生産性の向上</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														開発者がより効率的に作業できるようになることで、プロジェクトの進行がスムーズになり、納期の遅延が削減されます。明確な指針があることで、開発の迷いや手戻りを減らし、チーム全体のアウトプットを最大化できます。
+													</li>
+												</ul>
+											</li>	
+											<li>
+												<strong class="checklist_header">ツールとテクノロジーの理解</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														チームが使用する技術スタック、開発環境、デバッグツールについての詳細な説明を提供し、開発者が適切なツールを効果的に活用できるようにします。これにより、作業効率が向上し、より高度な開発にも迅速に対応できるようになります。
+													</li>
+												</ul>
+											</li>	
+											<li>
+												<strong class="checklist_header">上級開発者への依存度の低減</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														明確なドキュメントと標準化されたプロセスを用意することで、新人が上級開発者に頻繁に依存する必要がなくなります。これにより、上級開発者はより複雑な課題や設計業務に集中でき、チーム全体の開発力を高めることができます。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">チームコラボレーションの強化</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														チームワーク、円滑なコミュニケーション、適切なドキュメント作成の実践に関するガイドラインを提供し、協力しやすい開発環境を構築します。情報共有の円滑化により、チームの一体感が増し、プロジェクトの成功率が向上します。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">離職率の低下</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														十分な準備とサポートを受けた開発者は、自信を持って業務に取り組むことができ、仕事への満足度が向上します。これにより、フラストレーションが軽減され、離職率の低下につながります。組織全体の安定性を維持し、継続的な成長を促進します。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">プロジェクト成果の向上</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														開発プロセスの効率化とコード品質の向上により、より高品質なソフトウェア製品を生み出すことができます。結果として、顧客満足度が向上し、ビジネス全体の成功にも貢献します。
+													</li>
+												</ul>
+											</li>							
+										</ol>	
+									</li>
+								</ul>
+							</ul>								 																					
+						</section>
+
+						<!--Purpose-->
+						<section id="ExpectedResults">	
+							<br />
+							<h3><strong> 期待される結果（個々の開発者のメリット）:</strong></h3>
+							<ul>
+								<ul>
+									<li>
+										
+										<ol>
+											<li>
+												<strong class="checklist_header">スムーズなオンボーディング</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														新入社員が自分の役割と責任を素早く理解し、会社の開発ワークフローやベストプラクティスに迅速に適応できるよう支援します。明確な指針により、業務開始までの時間を短縮し、スムーズな立ち上がりを実現します。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">効率的な開発環境の構築</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+												開発環境のセットアップ手順を明確にし、必要なツールを適切に導入・活用することで、生産性を最大限に引き出します。初心者でも迷うことなく、開発業務に専念できる環境を提供します。
+													</li>
+												</ul>
+											</li>		
+											<li>
+												<strong class="checklist_header">学習曲線の短縮</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														構造化されたガイドラインを通じて、開発者がテクノロジースタックやワークフローに素早く適応できるようサポートします。無駄な試行錯誤を減らし、効率的なスキル習得を促進します。
+													</li>
+												</ul>
+											</li>	
+											<li>
+												<strong class="checklist_header">スキル開発の強化</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														業界標準やベストプラクティスに基づいた指導を通じて、技術的な専門知識を深めます。クリーンで保守性の高いコードの書き方を習得し、適切なドキュメント化の重要性を理解することで、長期的に価値のある開発スキルを身につけられます。
+													</li>
+												</ul>
+											</li>	
+											<li>
+												<strong class="checklist_header">キャリア成長の促進</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														効率的なコーディング手法、バージョン管理、チームワークのスキルを実践的に学ぶことで、開発者としての市場価値を高め、長期的なキャリアの発展を後押しします。
+													</li>
+												</ul>
+											</li>	
+											<li>
+												<strong class="checklist_header">技術的問題への対応力向上</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														一般的な技術的問題に対するトラブルシューティングやデバッグ手法を学び、最小限のサポートで問題を解決できる能力を養います。これにより、自律的に課題を克服できる開発者へと成長できます。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">自信の向上</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														ツールやプロセスに関する明確なガイダンスを提供することで、開発者のミスを減らし、安心して作業できる環境を作ります。確かな知識と経験を積み重ねることで、プロジェクトへの積極的な貢献が可能になります。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">ワークライフバランスの向上</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														効率的な開発タスクの進め方を学ぶことで、無駄な作業やストレスを軽減し、不必要な残業を最小限に抑えます。これにより、仕事と私生活のバランスを取りやすくなります。
+													</li>
+												</ul>
+											</li>
+											<li>
+												<strong class="checklist_header">強固なチーム統合の実現</strong>
+												<ul style="list-style-type: disc;">
+													<li>
+														円滑なコミュニケーション手法やコラボレーションツールの活用を学ぶことで、チーム内の連携を強化します。Git などのバージョン管理システムを活用し、効率的に共同作業を行うことで、チーム全体の生産性向上にも貢献します。
+													</li>
+												</ul>
+											</li>							
+										</ol>	
+									</li>
+								</ul>
+							</ul>								 																					
+						</section>
+						
+						<!--START-INTRODUCTION-->				
+						<section id="TechnicalSkillTraining">			
+							<hr class="vertical-space2">				
+							<h3><strong>Checklist</strong></h3>
+							<h4><strong>Technical Skill Training</strong></h4>
+							<ol>
+								<li>
+									<strong>導入とオンボーディング</strong>																
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="introductionCheckbox" style="vertical-align: middle;" disabled>
+												<label for="introductionCheckbox" style="vertical-align: middle;" class="checklist_header">会社とチームの紹介</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>会社のビジョン・ミッション・企業文化の理解</li>
+												<li>開発チームの構成と主要な役割の説明</li>
+												<li>進行中のプロジェクトとワークフローの概要紹介</li>
+												<li>行動規範と職業上の期待（プロ意識・チームワーク・責任感）</li>
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPI（評価指標）</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>企業文化とワークフローの理解度（Q&Aセッションを通じて評価</li>
+												<li>入門セッションのクイズの完了（基礎知識の定着）/li>
+												<li>チームの議論や活動への積極的な参加</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>開発環境のセットアップ</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="DevelopmentEnvironment" style="vertical-align: middle;" disabled>
+												<label for="DevelopmentEnvironment" style="vertical-align: middle;" class="checklist_header">システムおよびツールのセットアップ</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>会社支給のPCまたは開発環境の準備</li>
+												<li>必要なソフトウェア（Skype、Azure Teams、IDEなど）のインストール</li>
+												<li>開発ツールの設定（Gitのセットアップ、IDEの初期設定</li>
+												<li>プロジェクトリポジトリとドキュメントへのアクセス確認</li>
+												<li>ローカル、ステージング、本番環境の概要と違いを理解</li>
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPI（評価指標）</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>2営業日以内に開発環境のセットアップを完了</li>
+												<li>1日以内にリポジトリへアクセスし、最初のコミットを成功させる</li>
+												<li>ウォークスルーを通じて環境の理解度を評価</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>バージョン管理とコラボレーション</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="VersionControl" style="vertical-align: middle;" disabled>
+												<label for="VersionControl" style="vertical-align: middle;" class="checklist_header">Git とプロジェクト管理ツール</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Git の基本操作（プロジェクトのクローン、ブランチ作成、マージ、プルリクエスト）</li>
+												<li>構造化されたコミットメッセージとリポジトリガイドラインの遵守</li>
+												<li>コードレビューの手順とベストプラクティスの理解</li>
+												<li>プロジェクト管理ツール（Jira、Azure DevOps など）の活用</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPI（評価指標）</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>スプリントごとに正常にマージされたプルリクエストの数</li>
+												<li>コードレビュー承認率（初回レビュー後に承認されたPRの割合）</li>
+												<li>適切なコミットメッセージの遵守率（95%以上）</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>コード標準とベストプラクティス</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="CodeStandards" style="vertical-align: middle;" disabled>
+												<label for="CodeStandards" style="vertical-align: middle;" class="checklist_header">質の高いコードを書く</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>会社が定めるコーディング規則（命名、フォーマット、コメント）の遵守</li>
+												<li>クリーンで保守しやすく、再利用可能なコードの作成</li>
+												<li>エラー処理とデバッグ技術の実装</li>
+												<li>秘密情報の漏洩を防ぐ安全なコーディング手法の採用</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPI（評価指標）</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>コード品質の向上</li>
+												<li>コードレビューで検出されたセキュリティ脆弱性の数</li>
+												<li>最初のデプロイメント時のバグのないコード率</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>プロジェクトワークフローとアジャイル手法</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="ProjectWorkflow" style="vertical-align: middle;" disabled>
+												<label for="ProjectWorkflow" style="vertical-align: middle;" class="checklist_header">アジャイルとスクラムの理解</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>アジャイル手法の基礎（スプリント、バックログ、タスクボード、振り返り）</li>
+												<li>デイリースクラムへの参加と効果的な発言</li>
+												<li>スプリントボードでのタスクの管理と進捗追跡</li>
+												<li>要件の収集・評価・時間見積もりの実施</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPI（評価指標）</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>毎日のスタンドアップミーティングへの出席率</li>
+												<li>スプリントごとのタスク完了率</li>
+												<li>予定されたタスク完了時間と実際の完了時間の整合性</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>テストと品質保証</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="TestingQuality" style="vertical-align: middle;" disabled>
+												<label for="TestingQuality" style="vertical-align: middle;" class="checklist_header">テストの作成と実行</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>各関数の単体テストの作成</li>
+												<li>タスク完了後の開発テストの実施</li>
+												<li>統合テストおよび回帰テストの実践</li>
+												<li>自動テストツールの習得と活用</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPI（評価指標）</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>ードカバレッジ率の向上</li>
+												<li>テストと本番環境で報告されたバグの数</li>
+												<li>自動テスト実行の成功率</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>セキュリティ対策</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="Security" style="vertical-align: middle;" disabled>
+												<label for="Security" style="vertical-align: middle;" class="checklist_header">安全な開発プラクティス</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>データプライバシーポリシーの遵守</li>
+												<li>安全な認証と承認の実装（JWT、OAuth など）</li>
+												<li>安全な API 開発の実践</li>
+												<li>一般的なセキュリティ脅威（SQL インジェクション、CSRF、XSS）の防止</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPI（評価指標）</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>スプリントごとに特定されたセキュリティ脆弱性の数</li>
+												<li>セキュリティ侵害のない認証成功率</li>
+												<li>セキュリティ基準の遵守率</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>Assessment</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="Assessment" style="vertical-align: middle;" disabled>
+												<label for="Assessment" style="vertical-align: middle;" class="checklist_header">実践的な課題のクリア</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>小規模なコーディングチャレンジやバグ修正の完了</li>
+												<li>サンプルプロジェクトへの取り組みや既存プロジェクトへの貢献</li>
+												<li>上級開発者とのグルーミングセッションへの参加</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Challenge completion success rate</li>
+												<li>Number of code contributions made within the first month</li>
+												<li>Performance evaluation from senior developers</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>Team Communication & Collaboration</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="TeamCommunication" style="vertical-align: middle;" disabled>
+												<label for="TeamCommunication" style="vertical-align: middle;" class="checklist_header">Effective Communication Practices</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Write proper technical documentation</li>
+												<li>Report issues and request help effectively</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Response time to messages and issue reporting</li>
+												<li>Clarity and completeness of documentation</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ol>					
+						</section>					
+
+						<section id="SoftSkillTraining">						          													
+							<h4><strong>Soft Skill Training </strong></h4>		
+							<ol>
+								<li>
+									<strong>Communication</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="Communication" style="vertical-align: middle;" disabled>
+												<label for="Communication" style="vertical-align: middle;" class="checklist_header">Improving Interaction Skills</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Participate actively in daily standups</li>
+												<li>Provide daily task updates at the end of the day</li>											
+												<li>Keep sprint board updated</li>											
+												<li>Practice active listening and requirement understanding</li>											
+												<li>Share risks and plans with teammates</li>											
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Daily scrum participation rate</li>
+												<li>Timeliness in updating the sprint board</li>											
+												<li>Peer feedback rating on communication skills</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>Development structure</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="Developmentstructure" style="vertical-align: middle;" disabled>
+												<label for="Developmentstructure" style="vertical-align: middle;" class="checklist_header">Efficient Task Handling</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Gather requirements before development</li>
+												<li>Prepare a development plan</li>											
+												<li>Identify risks and execute tasks within estimated time</li>											
+												<li>Conduct development testing before merging</li>																														
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Task completion rate within estimated time</li>
+												<li>Dev testing pass rate before merging</li>											
+												<li>Number of escalated issues due to unclear requirements</li>											
+											</ul>
+										</li>									
+									</ul>
+								</li>
+								<li>
+									<strong>Task Volume Estimation & Time Management</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="TaskVolume" style="vertical-align: middle;" disabled>
+												<label for="TaskVolume" style="vertical-align: middle;" class="checklist_header">Handling Workloads Effectively</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Break down tasks properly before development</li>
+												<li>Estimate time accurately</li>											
+												<li>Prioritize tasks effectively</li>																						
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Accuracy of initial time estimation vs. actual time taken</li>
+												<li>Percentage of tasks delivered before or on deadline</li>											
+												<li>Proper breakdown of tasks into 2H–8H blocks</li>											
+											</ul>
+										</li>									
+									</ul>
+								</li>
+								<li>
+									<strong>Sprint Board & WBS (Work Breakdown Structure)</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="SprintBoard" style="vertical-align: middle;" disabled>
+												<label for="SprintBoard" style="vertical-align: middle;" class="checklist_header">Managing Sprint Board Properly</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Maintain all assigned tasks on the board</li>
+												<li>Write clear task descriptions</li>											
+												<li>Update task statuses in real-time</li>																						
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Sprint board update accuracy</li>											
+												<li>Task description completeness score</li>											
+											</ul>
+										</li>									
+									</ul>
+								</li>
+								<li>
+									<strong>Risk Management & Troubleshooting</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="RiskManagement" style="vertical-align: middle;" disabled>
+												<label for="RiskManagement" style="vertical-align: middle;" class="checklist_header">Handling Issues Proactively</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Identify risks before development (technical barriers, resource availability)</li>
+												<li>Prepare mitigation plans for known risks</li>											
+												<li>Debug issues effectively and document solutions</li>									
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Number of risks identified and mitigated before they cause blockers</li>
+												<li>Resolution time for high-priority bugs</li>											
+												<li>Number of documented solutions for recurring issues</li>											
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<strong>Leadership & Work Balance</strong>
+									<ul>
+										<li>
+											<strong>
+												<input type="checkbox" id="Leadership" style="vertical-align: middle;" disabled>
+												<label for="Leadership" style="vertical-align: middle;" class="checklist_header">Becoming a Responsible Developer</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Take ownership of projects and tasks</li>
+												<li>Maintain a professional and respectful work environment</li>											
+												<li>Balance work and personal life</li>									
+											</ul>
+										</li>
+										<li>
+											<strong>											
+												<label style="vertical-align: middle;" class="checklist_header">KPIs</label>
+											</strong>
+											<ul style="list-style-type: disc;">
+												<li>Number of leadership initiatives taken (mentoring, knowledge sharing)</li>
+												<li>Peer rating on helpfulness and teamwork</li>											
+												<li>Work-life balance rating in self-assessment surveys</li>											
+											</ul>
+										</li>									
+									</ul>
+								</li>
+							</ol>										
+						</section>
+
+						<section id="DevSkillDevelopment">
+							<h3><strong>Dev Skill Development Materials</strong></h1>
+							<table style="width: 100%; text-align: center;">
+								<tr style="font-weight: bold ;">
+									<th>Type</th>
+									<th>Skill</th>
+									<th>Keypoints</th>
+									<th>Study Material</th>
+									<th>Tools</th>
+									<th>Q/A</th>
+								</tr>
+								<tr>
+									<td rowspan="2">Communication & Coordination</td>
+									<td>Improve team bonding</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>What are the effective ways of team communication</li>
+											<li>Daily scrum and it's effect</li>
+											<li>Discussion sessions for any risk / difficulties without affecting the development time</li>
+											<li>Possible ways to increase the team members' understanding level</li>
+										</ol>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Improve communication with team and PM</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Requirements collection from the PM</li>
+											<li>How to make PM instructions more understandable to the team.</li>
+											<li>"Hou Ren Sou" during system development</li>
+										</ol>
+									</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>
+												<a href="https://www.youtube.com/watch?v=EffYcTNeYfo" target="_blank">
+													Session
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/presentation/d/1zIj6WE9ICmEP1YW3c_4yfpvChuzPSSqF/edit?usp=sharing&ouid=115282042618124807325&rtpof=true&sd=true" target="_blank">
+													HouRenSou
+												</a>
+											</li>
+										</ol>
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="3">Software Development Methodology Skill (Agile)</td>
+									<td>To understand and execute Agile Development (Scrum)</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Respective roles and execution</li>
+											<li>How agile methodology works</li>
+											<li>How to implement agile software development process in real application</li>
+										</ol>
+									</td>
+									<td></td>
+									<td rowspan="3">
+										<a href="https://dev.azure.com/adnanjabait/ScAI" target="_blank">
+											Devops Board
+										</a>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="2">Able to lead agile development (Scrum)</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>What is scrum</li>
+											<li>How scrum effect in daily development process</li>
+											<li>Who will be the participants of daily scrum</li>
+											<li>How often daily a team should do scrum</li>
+										</ol>
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td style="text-align: left;">
+										<ol>
+											<li>What is azure devops board</li>
+											<li>How to create sprint and add members</li>
+											<li>How to create sprint</li>
+											<li>How to maintain the development process using azure board</li>
+										</ol>
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="2">Work Breakdown Structure (WBS) SKill</td>
+									<td>Breaking tasks skill</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Definition of deliverables</li>
+											<li>How to make a proper plan for preparing the sprint backlog</li>
+											<li>How will dev members make plan and break the issues for development</li>
+											<li>How to break issues in to tasks at the very beginning of requirements collection and to test a feature</li>
+										</ol>
+									</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>
+												<a href="https://docs.google.com/presentation/d/1Z2JDkJHginCgfnXL6islJwG_xgRKgmN9XOv5hH-F5ds/edit#slide=id.g1f88252dc4_0_162" target="_blank">
+													Definition of Deliverables
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/presentation/d/1cW5reXj4xO-e0zuEHG-6ovVGYEEFIc0cqaZefqVjRj8/edit" target="_blank">
+													Plan for Sprint Backlog
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/presentation/d/1c6T5lKvIPPHfcmiYdnJG7ZnGY7utFB_tR2PlDSF6MZM/edit#slide=id.g27317d76ebc_0_67" target="_blank">
+													Task plan & breakdown issues
+												</a>
+											</li>
+										</ol>
+									</td>
+									<td></td>
+									<td style="text-align: left;">
+										<ol>
+											<li>
+												<a href="https://docs.google.com/spreadsheets/d/142qD5hMOPwaKeKL3Zf29EqSWAyN8sZXcTcX5krYaXOg/edit?usp=sharing" target="_blank">
+													WBS
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/spreadsheets/d/142qD5hMOPwaKeKL3Zf29EqSWAyN8sZXcTcX5krYaXOg/edit?gid=1214882008#gid=1214882008" target="_blank">
+													Deliverables
+												</a>
+											</li>
+										</ol>							
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Making user story planning skill</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>What is user story</li>
+											<li>How large in volume, can be a user story of a system</li>
+											<li>Who will be the responsible person to make this plan</li>
+											<li>How to define milestones for each user story</li>
+										</ol>
+									</td>
+									<td>
+										<a href="https://docs.google.com/presentation/u/0/d/12ORb0RxtFyFe90ybeLW8tNAHGTwcCeLRa8g4VoFnUfY/edit" target="_blank">
+											Effective User Stories and Milestone Setting
+										</a>
+									</td>
+									<td></td>
+									<td>
+										<a href="https://docs.google.com/spreadsheets/d/142qD5hMOPwaKeKL3Zf29EqSWAyN8sZXcTcX5krYaXOg/edit?gid=264395727#gid=264395727" target="_blank">
+											User Story
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="2">Time Management skill</td>
+									<td>Task volume evaluation skill</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>How to measure a task volume</li>
+											<li>How large a task can be in the development process</li>
+											<li>How to measure the time for a task</li>
+											<li>What will be the unit for measuring the task</li>
+											<li>How to maintain the development process time by defining the task time</li>
+										</ol>
+									</td>
+									<td>
+										<a href="https://docs.google.com/presentation/d/18Ep0Q5Sd0J8qB-P8wf1yZllYWhGsTbv32mFW0FLZagQ/edit?usp=sharing" target="_blank">
+											Task Evaluation Skill
+										</a>
+									</td>
+									<td></td>
+									<td>
+										<a href="https://docs.google.com/spreadsheets/d/1CMLWWUMx2PH7uvApLDfBzUIAQmWhSDpxYeYcuwq-KaM/edit?usp=sharing" target="_blank">
+											Task Evaluation Skill
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Prioritize task skill and development time management</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>How to define the priority of the task</li>
+											<li>How a dev member can understand the development hierarchy</li>
+											<li>How a dev member can easily utilize the development time</li>
+										</ol>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="2">Sprint</td>
+									<td>Sprint Planning Rules</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Milestone of each sprint</li>
+											<li>Deliverable of each sprint</li>
+											<li>Acceptance criteria and definition of "Done" for each task of a sprint</li>
+											<li>Evaluation of the capacity of the team</li>
+											<li>Evaluation of the task development time</li>
+											<li>Evaluation of Testing time in the sprint</li>
+											<li>Team capacity and planning</li>
+										</ol>
+									</td>
+									<td>
+										<a href="https://docs.google.com/document/d/1bG3XJF5vXR1eleWKS4ZLeXSv_TgN6-MG6cHUDlap9vg/edit?usp=sharing" target="_blank">
+											Sprint Planning Rules
+										</a>
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Sprint Operational Rules</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Frequent monitor of the progress</li>
+											<li>Daily target achievement</li>
+											<li>Daily scrum execution</li>
+											<li>Burndown chart management</li>
+											<li>Burndown chart management</li>
+											<li>Daily development progress on each deliverable</li>
+											<li>Scopes for risks</li>
+										</ol>
+									</td>
+									<td>
+										<a href="https://docs.google.com/document/d/1n0KuGPIpkFrJ-hwctCRCLKZhTTakT1LbY2ykW1tfsdw/edit?usp=sharing" target="_blank">
+											Sprint Operational Rules
+										</a>
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="2">Difficulties & Risks Management Skill</td>
+									<td>Recognition of project based risks</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Definition of risks</li>
+											<li>What can be the risks in software development process</li>
+											<li>How to analyze the affect of risks</li>
+											<li>How to manage the risks</li>
+											<li>How to make scopes for managing the risks in the development process</li>
+										</ol>
+									</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>
+												<a href="https://docs.google.com/presentation/u/0/d/15Vss9PPFlVk8f3zXq9DvHWrBy82zYtewXjsjaWrSyMI/edit" target="_blank">
+													Risks in Software Development
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/presentation/d/164UuOvydZK9zI_e0HZsU1OuCrY8PC0Bp78CQdQkc6AA/edit#slide=id.g27341dd2ea1_0_37" target="_blank">
+													Risk Analization
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/presentation/d/1qC8k1o6ArJhilL8iPl5sr7am7bC2F_AiLFDFW9SUVRo/edit#slide=id.g1f88252dc4_0_1535" target="_blank">
+													Risk Management
+												</a>
+											</li>
+										</ol>
+									</td>
+									<td></td>
+									<td>
+										<a href="https://docs.google.com/spreadsheets/d/142qD5hMOPwaKeKL3Zf29EqSWAyN8sZXcTcX5krYaXOg/edit?gid=2031372848#gid=2031372848" target="_blank">
+											Risk Management
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Recognization of Hidden Risks in development process</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Technology based risks that should be assumed before starting the development process</li>
+											<li>How to improve trouble shooting skill</li>
+											<li>How to prioritize the bugs in development process and make scopes for them</li>
+										</ol>
+									</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>
+												<a href="https://docs.google.com/document/d/1r7oBdJZp0_XyOCBWEpN2Y70-aRWaS10_joY_d3fWJMA/edit#heading=h.xs9qypwvag6c" target="_blank">
+													Technical Risk
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/presentation/d/1g0IYbcwJQG3woGVOSOLxZuQL_zjH3IFW/edit#slide=id.p3" target="_blank">
+													Trouble Shooting
+												</a>
+											</li>
+											<li>
+												<a href="https://docs.google.com/presentation/d/1Zgz83unY1bi-7lZ3Wjdm05gk4U6q-JQA_2OvR-cQ7Z4/edit#slide=id.p" target="_blank">
+													Prioritize Bugs
+												</a>
+											</li>
+										</ol>
+									</td>
+									<td></td>
+									<td>
+										<a href="https://docs.google.com/spreadsheets/d/142qD5hMOPwaKeKL3Zf29EqSWAyN8sZXcTcX5krYaXOg/edit?gid=2031372848#gid=2031372848" target="_blank">
+											Technical Risk
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td rowspan="2">Requirement analysis, scope generation and summarization</td>
+									<td rowspan="2">System development process planning skill</td>
+									<td style="text-align: left;">
+										<ol>
+											<li>Scope Definition</li>
+											<li>Scope Controlling</li>
+											<li>Scope Management</li>
+										</ol>
+									</td>
+									<td>
+										<a href="https://docs.google.com/presentation/d/1Orrcm_ZKhVjsl6kWswp6LoaNJ4uyhQSF-DhapUVlfqg/edit?usp=sharing" target="_blank">
+											Scope Management
+										</a>
+									</td>
+									<td></td>
+									<td>
+										<a href="https://docs.google.com/spreadsheets/d/1IC3SbeVFlxqP3uwPrjAU3g9P15ln2QD8YkunrLnYRuY/edit?usp=sharing" target="_blank">
+											Scope Management
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: left;">
+										<ol>
+											<li>Project Acceptance Criteria</li>
+											<li>Project Exclusion</li>
+										</ol>
+									</td>
+									<td>
+										<a href="https://docs.google.com/presentation/d/1RVzENr9RznZeWPVCHy7Te4fjitQb6A1Da0ChGuXVTsQ/edit?usp=sharing" target="_blank">
+											Identifying Project Acceptance Criteria and Project Exclusions
+										</a>
+									</td>
+									<td></td>
+									<td>
+										<a href="https://docs.google.com/spreadsheets/d/1R0fdpgUCxTWVbawzVwuem33m6RWUuU1tehrpr1a5uhE/edit?usp=sharing" target="_blank">
+											Project Acceptance & exclutions
+										</a>
+									</td>
+								</tr>
+							</table>
+						</section>
+
+						<section id="PMSkillDevelopment">
+							<h3><strong>PM (Project Management) Skill Development Materials</strong></h1>
+								<table style="width: 100%; text-align: center;">
+									<tr style="font-weight: bold ;">
+										<th>Skill</th>
+										<th>Keypoints</th>
+										<th>Study Material</th>
+										<th>Study Report</th>
+										<th>Implementation</th>										
+									</tr>
+									<tr>
+										<td rowspan="4">Project Initiation Skill</td>
+										<td style="text-align: left;">
+											<ol>
+												<li>Understanding the significance of this phase</li>
+												<li>To be clear about Project's Purpose and Business Value</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://www.sprintzeal.com/blog/the-importance-and-roles-involved-in-the-project-initiation-phase" target="_blank">
+												Project Initiation Phase
+											</a>
+										</td>
+										<td>
+											<a href="https://docs.google.com/presentation/d/1x_eGv9Z2RL91iTxEom2FIRBiknElnQc5w2k54tLezWE/edit?usp=sharing" target="_blank">
+												Project Initiation
+											</a>
+										</td>
+										<td style="text-align: left;">
+											<ol>
+												<li>To kick off a project what formalities should be maintained</li>
+												<li>Concepts of business model for a project should be consider</li>
+												<li>Project definition before the project planning</li>
+												<li>Criterias we need to follow for project planning</li>
+												<li>Stakeholders</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ol>
+												<li>Creating a Project Charter or Business Case</li>
+												<li>Start by broadly defining the project</li>
+												<li>Clearly articulate why undertaking the project and what value it will deliver to the organization</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://www.projectmanager.com/blog/project-charter" target="_blank">
+												Prepare Project Charter
+											</a>
+										</td>
+										<td></td>										
+										<td></td>										
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ol>
+												<li>Identifying Key Stakeholders and Pitching the Project</li>
+												<li>Engage with relevant stakeholders early on</li>
+												<li>Explain the project’s objectives, benefits, and potential impact</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://opentextbc.ca/projectmanagement/chapter/chapter-5-project-stakeholders-project-management/" target="_blank">
+												Identify Stakeholders
+											</a>
+										</td>
+										<td></td>
+										<td>
+											<a href="https://docs.google.com/spreadsheets/d/1xqMyOTn97a2a4hzgvW3tywH9kfCsoViTjzb7TflZ85g/edit?usp=sharing" target="_blank">
+												Stakeholders (LMS)
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<ol>
+												<li>Feasibility Study</li>
+												<li>Consider factors like technical feasibility, resource availability, and potential risks</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://www.projectmanager.com/training/how-to-conduct-a-feasibility-study" target="_blank">
+												Feasibility Study
+											</a>
+										</td>
+										<td>
+											<a href="https://docs.google.com/presentation/d/18MCF4Z_BROdiS7_GuNnocid-LQxQcPR3EVbg3qZRf2c/edit?usp=sharing" target="_blank">
+												Project Feasibility Study
+											</a>
+										</td>
+										<td style="text-align: left;">
+											<ol>
+												<li>Feasible technical researches for the LMS project (Figma to HTML code conversion)</li>
+												<li>Feasible existing system analysis (Research the adguard application and system process)</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td rowspan="3">Project Planning Skill</td>
+										<td style="text-align: left;">
+											<strong>Understanding Project Goals & Objectives</strong><br>
+											Define the Project Purpose and Goals. Then define the objectives in smaller steps. Start the project scope document by explaining these goals and objectives
+										</td>
+										<td style="text-align: left;">
+											<ol>
+												<li>
+													<a href="https://kidasa.com/defining-project-goals-and-objectives/#:~:text=Goals%20are%20high%20level%20statements,that%20the%20project%20will%20deliver." target="_blank">
+														Defining Project Goals and Objectives
+													</a>
+												</li>
+												<li>
+													<a href="https://www.atlassian.com/work-management/project-management/project-objectives" target="_blank">
+														Understanding project objectives in project management
+													</a>
+												</li>
+											</ol>
+										</td>
+										<td></td>
+										<td rowspan="2">
+											<a href="https://drive.google.com/file/d/1Eu_D7FGIFUPXPBaMyT0GZNCeE1P5VJb6/view?usp=sharing" target="_blank">
+												Requirement Definition (LMS system)
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Undestanding Project Requirements</strong><br>
+											Define the project requirements including the expected quality, risks, benefits, and costs, and get it approved by all stakeholders
+										</td>
+										<td>
+											<a href="https://www.projectmanager.com/blog/requirements-management#:~:text=In%20project%20management%2C%20requirements%20are,strategic%20goals%20of%20the%20organization." target="_blank">
+												Project Requirements Management
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Defining the Project Scope</strong><br>
+											<ol>
+												<li>Define all scopes that encompass all the work needed to complete the project.</li>
+												<li>Use a WBS(work breakdown structure) to visualize tasks, deliverables, and milestones</li>
+												<li>Project Exclusions</li>
+												<li>Identify project constraints, such as time or cost limitations</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://www.projectmanager.com/blog/project-scope" target="_blank">
+												What is project scope?
+											</a>
+										</td>
+										<td></td>
+										<td style="text-align: left;">
+											<ol>
+												<li>
+													<a href="https://docs.google.com/spreadsheets/d/1X-W1hGb4-1iVGo85zOrjNJoQ5JifUn2K2RlcDiopkc0/edit?usp=sharing" target="_blank">
+														Sprint scope & WBS (LMS system)
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/ScAI" target="_blank">
+														ScAI Board
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/License%20Management%20System" target="_blank">
+														LMS Board
+													</a>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td rowspan="6">Project Scoping Skill</td>
+										<td style="text-align: left;">
+											<strong>Actual steps management</strong>
+											<ol>
+												<li>Documented project requirements</li>
+												<li>Develop WBS</li>
+												<li>Sequence activities</li>
+												<li>Resource planning</li>												
+											</ol>
+										</td>
+										<td>
+											<a href="https://learn.microsoft.com/en-us/azure/devops/boards/best-practices-agile-project-management?view=azure-devops&tabs=agile-process" target="_blank">
+												Agile Project Management
+											</a>
+										</td>
+										<td></td>
+										<td>
+											<a href="https://docs.google.com/spreadsheets/d/1X-W1hGb4-1iVGo85zOrjNJoQ5JifUn2K2RlcDiopkc0/edit?gid=1542835326#gid=1542835326" target="_blank">
+												Schedule Managment & WBS (LMS system)
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Tasks in WBS(Work Breakdown Structure) Management</strong>
+											<ol>
+												<li>Specific activities that need to be accomplished within a set period</li>
+												<li>Tasks are assigned to team members based on their roles and skill sets</li>
+											</ol>
+										</td>
+										<td></td>
+										<td>
+											<a href="https://docs.google.com/spreadsheets/d/11hUItc0sO_sgQ5aRXVkMiAR3O8I3k6a4x6apqs1OvgQ/edit?usp=sharing" target="_blank">
+												Learn About WBS
+											</a>
+										</td>
+										<td style="text-align: left;">
+											<ol>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/ScAI" target="_blank">
+														ScAI Board
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/License%20Management%20System" target="_blank">
+														LMS Board
+													</a>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Milestones Management</strong>
+											<ol>
+												<li>Important points in the schedule that indicate progress</li>
+												<li>Signify completion of deliverables or phase of a project</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://www.projectmanager.com/blog/milestones-project-management" target="_blank">
+												What is Milestone?
+											</a>
+										</td>
+										<td></td>
+										<td style="text-align: left;">											
+											<ol>
+												<li>
+													<a href="https://docs.google.com/spreadsheets/d/18wFTxWciCs8f44fDXsHfUAFMnv-q19s7yfFrBhq7wiM/edit?usp=sharing" target="_blank">
+														Sprint Review
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/ScAI" target="_blank">
+														ScAI Board
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/License%20Management%20System" target="_blank">
+														LMS Board
+													</a>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Resources Management</strong>
+											<ol>
+												<li>Add Team Members</li>
+												<li>Role clarification</li>
+												<li>Assign responsibilites</li>
+												<li>Effective task managment</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://birdviewpsa.com/blog/resource-management-in-project-management-process-tools-benefits-technique/" target="_blank">
+												Resource management in Project Management
+											</a>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Documentation Management</strong>
+											<ol>
+												<li>Drafting a project plan that links to relevant documents</li>
+												<li> RACI chart (Responsibility Assignment Matrix) and a project charter, helps define roles and outlines project details</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://www.projectmanager.com/blog/great-project-documentation" target="_blank">
+												Project Documentation
+											</a>
+										</td>
+										<td></td>
+										<td rowspan="2" style="text-align: left;">											
+											<ol>
+												<li>
+													<a href="https://docs.google.com/spreadsheets/d/1X-W1hGb4-1iVGo85zOrjNJoQ5JifUn2K2RlcDiopkc0/edit?gid=1542835326#gid=1542835326" target="_blank">
+														Sprint & WBS Report (LMS system)
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/ScAI" target="_blank">
+														ScAI Board
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/License%20Management%20System" target="_blank">
+														LMS Board
+													</a>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Time Management</strong>
+											<ol>
+												<li>Estimated duration of the project, including start and end dates for tasks and milestones</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://graduate.northeastern.edu/resources/time-management-project-management/" target="_blank">
+												Time management strategy in Project
+											</a>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="3">Project Kickoff Meeting Skill</td>
+										<td>Conducting kickoff meetings sets the tone for the project and ensures everyone is on the same page</td>
+										<td rowspan="3">
+											<a href="https://technologyadvice.com/blog/information-technology/project-kickoff-meeting/" target="_blank">
+												7 steps of Project Kickoff Meeting
+											</a>
+										</td>
+										<td rowspan="3"></td>
+										<td rowspan="3" style="text-align: left;">
+											<ol>
+												<li>A kickoff meeting was held between the JP and BD team</li>
+												<li>Several meeting will be held but BD team are waiting for getting all the requirements</li>
+												<li>After requirement and system analysis, another meeting will be held with the STG team members and BD team members for getting all the requirements more clearly</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Pre-work</strong>
+											<ol>
+												<li>Share background information in advance</li>
+												<li>Involve the team and stakeholders actively</li>
+											</ol>
+											<strong>Agenda</strong>
+											<ol>
+												<li>Create a streamlined agenda with key questions for the team</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Meeting Structure</strong>
+											<ol>
+												<li>Introduction</li>
+												<li>Purpose</li>
+												<li>Action Plan</li>
+												<li>Success Criteria</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td rowspan="6">Project Timeline Mapping Skill</td>
+										<td style="text-align: left;">
+											<strong>Define the Project Scope and Goals</strong>
+											<ol>
+												<li>Clearly outline the project’s purpose, objectives, and deliverables</li>
+												<li>Understand what needs to be accomplished and the overall project duration</li>
+											</ol>
+										</td>
+										<td rowspan="6">
+											<a href="https://www.teamwork.com/blog/project-timeline/" target="_blank">
+												How to create project timeline?
+											</a>
+										</td>
+										<td rowspan="6"></td>
+										<td style="text-align: left;">
+											<ol>
+												<li>
+													<a href="https://docs.google.com/spreadsheets/d/18wFTxWciCs8f44fDXsHfUAFMnv-q19s7yfFrBhq7wiM/edit?usp=sharing" target="_blank">
+														Sprint Review
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/ScAI" target="_blank">
+														ScAI Board
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/License%20Management%20System" target="_blank">
+														LMS Board
+													</a>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Identify Project Deliverables</strong>
+											<ol>
+												<li>List down all the tasks and deliverables required to complete the project</li>
+												<li>Break them down into manageable components</li>
+											</ol>
+										</td>
+										<td rowspan="5" style="text-align: left;">
+											<ol>
+												<li>
+													<a href="https://docs.google.com/spreadsheets/d/1X-W1hGb4-1iVGo85zOrjNJoQ5JifUn2K2RlcDiopkc0/edit?gid=1542835326#gid=1542835326" target="_blank">
+														Sprint & WBS Report (LMS system)
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/ScAI" target="_blank">
+														ScAI Board
+													</a>
+												</li>
+												<li>
+													<a href="https://dev.azure.com/adnanjabait/License%20Management%20System" target="_blank">
+														LMS Board
+													</a>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Create a List of Activities</strong>
+											<ol>
+												<li>Identify the specific activities or tasks needed to achieve each deliverable</li>
+												<li>Consider dependencies between tasks (i.e., which tasks must be completed before others)</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Estimate Task Durations</strong>
+											<ol>
+												<li>Estimate the time needed for each task</li>
+												<li>Be realistic and consider factors like resources, complexity, and team availability</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Determine Milestones</strong>
+											<ol>
+												<li>Define significant points in the project, such as completion of major tasks or project phases</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">
+											<strong>Create the Project Timeline</strong>
+											<ol>
+												<li>Use tools like Gantt charts, specialized project timeline software, or even Excel1 to map out the tasks and milestones</li>
+												<li>Arrange tasks chronologically, showing their start and end dates</li>
+												<li>Visualize the timeline to make it easy for everyone involved to understand</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td>Project Brief Writing Skill</td>
+										<td style="text-align: left;">
+											<strong> A concise document that outlines the essential elements of a project</strong>
+											<ol>
+												<li>Project Goals (Clearly state what the project aims to achieve)</li>
+												<li>Scope (Describe the boundaries of the project)</li>
+												<li>Deliverables (List the main outputs or results expected from the project)</li>
+												<li>Milestones (Identify key points in the project timeline)</li>
+												<li>Timeline (Specify start and end dates or durations)</li>
+												<li>Stakeholders: Mention key individuals or groups involved</li>
+												<li>Constraints: Highlight any limitations (budget, resources, etc.)</li>
+											</ol>
+										</td>
+										<td>
+											<a href="https://www.projectcentral.com/blog/project-brief/" target="_blank">
+												5 Steps to Writing a Clear Project Brief
+											</a>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+						</section>
+
+						<!-- Conclusion -->
+						<Section id="Conclusion" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+							<h1><strong>Conclusion</strong></h1>
+							<p align=justify>十分に訓練された開発者は、自信を持ち、生産性の高いチームメンバーとして活躍できます。彼らは技術的なスキル									を磨くだけでなく、円滑なコミュニケーションを図り、タスクを効率的に管理する能力も備えています。本マニュアルは、新し									い開発者がこれらのスキルを習得し、成長するための包括的なロードマップとして設計されています。初心者から経験者まで、									すべての開発者が実践できる具体的なガイドラインを提供することで、スムーズな学習プロセスをサポートします。</p>
+							<p align=justify>このガイドラインに従うことで、開発者はチームに対して効果的に貢献し、キャリアを着実に成長させることができ									ます。また、単に技術を磨くだけでなく、バランスの取れた協力的な作業環境を維持しながら、高品質なソフトウェアの開発に									取り組むことが可能になります。チーム全体のパフォーマンス向上を目指し、持続的な成功へとつながる実践的な知識を身につ									けましょう。</p>
+
+						</Section>
+					</div>	
+				</div>
+				<!--END-BODY CONTENT-->
+
+			<div class="white-space"></div>
+			</div>
+		</section>
+		<!-- END-MAIN CONTAINER -->	
+	
+		<span id="scroll-top"><a class="scrollup"></a></span>
+	</div>
+	<!-- END-BODY WRAP CONTENT -->	
+	
+	<script src="js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="js/doubletaptogo.js" ></script>
+	<script type="text/javascript" src="js/cube-custom.js" ></script>
+</body>
+<script>
+	function showLoader() {
+		document.getElementById('loader').style.display = 'block'; // Show loader
+		document.getElementById('wrap').style.display = 'none'; // Hide content
+	}
+
+	// Function to hide the loader and show the content
+	function hideLoader() {
+		document.getElementById('loader').style.display = 'none'; // Hide loader
+		document.getElementById('wrap').style.display = 'block'; // Show content
+	}
+	showLoader();
+
+	// Function to Auto-Translate to Japanese
+	function translateToJapanese() {		
+		var select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = "ja";  // Set Japanese as the default translation
+			select.dispatchEvent(new Event("change"));
+		}
+		hideLoader();
+	}
+
+	// Wait for Google Translate to Load
+	setTimeout(translateToJapanese, 1000);
+
+	// Manual Language Switcher
+	document.getElementById("language-select").addEventListener("change", function() {
+		// showLoader(); // Show loader before starting translation
+		var selectedLang = this.value;
+		var select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = selectedLang;
+			select.dispatchEvent(new Event("change"));
+		}
+	});
+
+	// Listen for the translation to complete
+	document.addEventListener('DOMContentLoaded', function() {
+		var translateElement = document.querySelector('.goog-te-combo');
+		if (translateElement) {
+			translateElement.addEventListener('change', function() {
+				hideLoader(); // Hide loader after translation is complete
+			});
+		}
+	});
+
+	// Toggle Checklist Submenu
+	$("#Checklist_toggle").click(function (e) {
+		e.preventDefault();
+		$("#Checklist_id").slideToggle();
+	});
+
+	// Toggle Study Material Submenu
+	$("#material-toggle").click(function (e) {
+		e.preventDefault();
+		$("#material-id").slideToggle();
+	});
+
+	// Toggle Training Manual Submenu
+	$("#manuals-toggle").click(function (e) {
+		e.preventDefault();
+		$("#manuals-id").slideToggle();
+	});
+</script>
+</html>

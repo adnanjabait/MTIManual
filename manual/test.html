@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Training Manual - Documentation</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../css/style.css" type="text/css"  media="all">
+	<link rel="stylesheet" href="../css/custome.css" type="text/css"  media="all">
+	<link rel="stylesheet" href="../css/print.css" type="text/css"  media="print">
+	<!--<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css"> -->
+	
+	<link href="http://fonts.googleapis.com/css?family=Yu Gothic:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript" src="../js/jquery.min.js" ></script>
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	
+	<!-- Google Translate API -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en', includedLanguages: 'ja,en', autoDisplay: false},
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+	<style>
+		/* General Styles */
+		body {
+			font-family: 'Roboto', sans-serif, 'Yu Gothic', 'YuGothic';
+			line-height: 1.6;
+			color: #333;
+		}
+
+		/* Increase font size for normal list items */
+		ul li, ol li,a {
+			font-size: 14px; 
+			margin-bottom: 10px;
+		}
+
+		/* Style for checklist headers */
+		.checklist_header {
+			font-size: 18px; /* Slightly larger for headers */
+			font-weight: bold;
+			color: #2c3e50;
+		}
+
+		/* Add some padding and margin to sections */
+		section {
+			margin-bottom: 30px;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Style for links */
+		a {
+			color: #3498db;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		/* Style for checkboxes */
+		input[type="checkbox"] {
+			margin-right: 10px;
+		}
+
+		/* Style for the side menu */
+		/* #side-nav {
+			background-color: #2c3e50;
+			padding: 20px;
+			border-radius: 8px;
+			color: #fff;
+		}
+
+		#side-nav a {
+			color: #fff;
+		}
+
+		#side-nav a:hover {
+			color: #3498db;
+		} */
+
+		/* Style for the header */
+		#header-sm {
+			background-color: #3498db;
+			color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			margin-bottom: 20px;
+		}
+
+		#header-sm h4, #header-sm h5 {
+			margin: 0;
+		}
+
+		/* Style for the main content */
+		/* #wrap {
+			padding: 20px;
+		} */
+		#wrap {
+			display: none; /* Hide content initially */
+		}
+
+		/* Style for the footer */
+		.white-space {
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Loader -->
+	<div id="loader">
+		<img src="../image/loader.gif" alt="Loading..." />
+	</div>
+	<!-- START-BODY WRAP CONTENT -->	
+	<div id="wrap" class="colorskin-0">	
+	<!-- Language Switcher -->
+	
+
+	<div id="google_translate_element" style="display: none;"></div> <!-- Hidden Google Translate UI -->
+
+		<!-- START-MAIN CONTAINER -->	
+		<section class="container">
+			<div class="row">
+				<!-- <div id="google_translate_element"></div> -->
+
+				<!--START-SIDE MENU-->
+				<div class="col-md-3" id="sticky-sidebar">
+					<div class="logo"> <img src="../image/mti-logo.png"  id="img-logo" alt="logo"> </div>
+					<aside id="side-nav">						
+						
+						<ul id="top-menu">
+							
+							<!-- Home -->
+							<li><a href="../#Home">ホーム</a></li>
+							
+							<!-- Introduction -->
+							<li><a href="../#Introduction">What is Manual Testing?</a></li>
+
+                            <!-- Integration Testing Menu -->
+                            <li id="integration">
+                                <a href="" id="integration-toggle">Integration Testing</a>
+                                <ul id="integration-id" class="submenu" style="display: none;">
+                                    <li><a href="#IntegrationDefinition">Definition</a></li>
+                                    <li><a href="#IntegrationPurpose">Purpose</a></li>
+                                    <li><a href="#IntegrationPrecondition">Precondition</a></li>
+                                    <li><a href="#IntegrationSteps">Steps</a></li>
+                                    <li><a href="#IntegrationSample">Sample Test Case</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Relational Testing Menu -->
+                            <li id="relational">
+                                <a href="" id="relational-toggle">Relational Testing</a>
+                                <ul id="relational-id" class="submenu" style="display: none;">
+                                    <li><a href="#RelationalDefinition">Definition</a></li>
+                                    <li><a href="#RelationalPurpose">Purpose</a></li>
+                                    <li><a href="#RelationalPrecondition">Precondition</a></li>
+                                    <li><a href="#RelationalSteps">Steps</a></li>
+                                    <li><a href="#RelationalSample">Sample Test Case</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- System Testing Menu -->
+                            <li id="system">
+                                <a href="" id="system-toggle">System Testing</a>
+                                <ul id="system-id" class="submenu" style="display: none;">
+                                    <li><a href="#SystemDefinition">Definition</a></li>
+                                    <li><a href="#SystemPurpose">Purpose</a></li>
+                                    <li><a href="#SystemPrecondition">Precondition</a></li>
+                                    <li><a href="#SystemSteps">Steps</a></li>
+                                    <li><a href="#SystemSample">Sample Test Case</a></li>
+                                </ul>
+                            </li>							
+
+							<!-- Conclusion -->
+							<li><a href="#Conclusion">Conclusion</a></li>
+						</ul>
+					</aside>
+				</div>
+				<!--END-SIDE MENU-->
+
+				<!--START-BODY CONTENT-->
+				<div class="col-md-9">
+					<div id="header" class="row">								
+						<div class="col-md-8 col-md-offset-1 desc" style="text-align: left; margin: 10px 0px 0px 0px;">
+							<h4 class="slight">QC Training Manual</h4>					
+						</div>
+						<div class="col-md-3" style="float: right; padding-top: 5px;">
+							<div style="text-align: right; padding: 10px;">
+								<!-- <label for="language-select">Language: </label> -->
+								<select id="language-select">
+									<option value="en">English</option>
+									<option value="ja" selected>Japanese</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="body-content">
+						<!-- Home page -->
+						<Section id="Home" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+							<h1><strong>Quality Control Training Manual</strong></h1>
+							<h4>Prepared by: ITA</h4>
+						</Section>
+						
+						<!-- Introduction -->
+						<Section id="Introduction" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+							<h1><strong>What is Manual Testing?</strong></h1>
+							<p align=justify>このトレーニングマニュアルは、新しい開発者が当社の開発プロセス、ツール、ベストプラクティスに迅速に適応できるよう設計されています。コーディング標準、バージョン管理、アジャイル手法、セキュリティ対策に関する体系的なガイダンスを提供することで、開発の一貫性と効率性を確保し、スムーズなワークフローを実現します。特に、当社の開発環境に特化したベストプラクティスを明確に示すことで、新しい開発者が戸惑うことなく業務に取り組めるよう配慮しています。</p>
+                            <p align = justify>このマニュアルに従うことで、開発者は学習曲線を短縮し、スキルの習得を加速させるとともに、生産性の向上が期待できます。また、チームとの円滑な連携が促進されることで、プロジェクト全体の品質向上にも貢献します。さらに、統一された開発手法を採用することで、エラーの削減や保守性の向上が図られ、長期的な視点でのソフトウェア開発の効率化にも寄与します。本マニュアルを活用し、スムーズなオンボーディングと継続的な成長を実現してください。</p>							
+						</Section>
+
+                        <!-- Integration Testing Definition -->
+						<Section id="IntegrationDefinition" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+                            <h1><strong>Definition</strong></h1>
+                            <p align="justify">Integration testing verifies the interaction between different modules of the application to ensure they work together as expected. This testing phase detects defects in data flow, API calls, and communication between components.</p>
+                        </Section>
+
+						<!-- Conclusion -->
+						<Section id="Conclusion" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+							<h1><strong>Conclusion</strong></h1>
+							<p align=justify>十分に訓練された開発者は、自信を持ち、生産性の高いチームメンバーとして活躍できます。彼らは技術的なスキル									を磨くだけでなく、円滑なコミュニケーションを図り、タスクを効率的に管理する能力も備えています。本マニュアルは、新し									い開発者がこれらのスキルを習得し、成長するための包括的なロードマップとして設計されています。初心者から経験者まで、									すべての開発者が実践できる具体的なガイドラインを提供することで、スムーズな学習プロセスをサポートします。</p>
+							<p align=justify>このガイドラインに従うことで、開発者はチームに対して効果的に貢献し、キャリアを着実に成長させることができ									ます。また、単に技術を磨くだけでなく、バランスの取れた協力的な作業環境を維持しながら、高品質なソフトウェアの開発に									取り組むことが可能になります。チーム全体のパフォーマンス向上を目指し、持続的な成功へとつながる実践的な知識を身につ									けましょう。</p>
+
+						</Section>
+					</div>	
+				</div>
+				<!--END-BODY CONTENT-->
+
+			<div class="white-space"></div>
+			</div>
+		</section>
+		<!-- END-MAIN CONTAINER -->	
+	
+		<span id="scroll-top"><a class="scrollup"></a></span>
+	</div>
+	<!-- END-BODY WRAP CONTENT -->	
+	
+	<script src="../js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="../js/doubletaptogo.js" ></script>
+	<script type="text/javascript" src="../js/cube-custom.js" ></script>
+</body>
+<script>
+	function showLoader() {
+		document.getElementById('loader').style.display = 'block'; // Show loader
+		document.getElementById('wrap').style.display = 'none'; // Hide content
+	}
+
+	// Function to hide the loader and show the content
+	function hideLoader() {
+		document.getElementById('loader').style.display = 'none'; // Hide loader
+		document.getElementById('wrap').style.display = 'block'; // Show content
+	}
+	showLoader();
+
+	// Function to Auto-Translate to Japanese
+	function translateToJapanese() {		
+		var select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = "ja";  // Set Japanese as the default translation
+			select.dispatchEvent(new Event("change"));
+		}
+		hideLoader();
+	}
+
+	// Wait for Google Translate to Load
+	setTimeout(translateToJapanese, 1000);
+
+	// Manual Language Switcher
+	document.getElementById("language-select").addEventListener("change", function() {
+		// showLoader(); // Show loader before starting translation
+		var selectedLang = this.value;
+		var select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = selectedLang;
+			select.dispatchEvent(new Event("change"));
+		}
+	});
+
+	// Listen for the translation to complete
+	document.addEventListener('DOMContentLoaded', function() {
+		var translateElement = document.querySelector('.goog-te-combo');
+		if (translateElement) {
+			translateElement.addEventListener('change', function() {
+				hideLoader(); // Hide loader after translation is complete
+			});
+		}
+	});
+
+    // Integration Testing Submenu
+	$("#integration-toggle").click(function (e) {
+		e.preventDefault();
+		$("#integration-id").slideToggle();
+	});
+    // Relational Testing Submenu
+	$("#relational-toggle").click(function (e) {
+		e.preventDefault();
+		$("#relational-id").slideToggle();
+	});
+    // System Testing Submenu
+	$("#system-toggle").click(function (e) {
+		e.preventDefault();
+		$("#system-id").slideToggle();
+	});
+</script>
+</html>
