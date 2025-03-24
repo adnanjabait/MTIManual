@@ -143,10 +143,11 @@
 							<li><a href="../#Home">ホーム</a></li>
 							
 							<!-- Introduction -->
-							<li><a href="../#Introduction">What is Manual Testing?</a></li>
+							<li><a href="#Introduction">What is Manual Testing?</a></li>
 
                             <!-- Integration Testing Menu -->
-                            <li id="integration">
+							<li><a href="#IntegrationTest">Integration Test</a></li>
+                            <!-- <li id="integration">
                                 <a href="" id="integration-toggle">Integration Testing</a>
                                 <ul id="integration-id" class="submenu" style="display: none;">
                                     <li><a href="#IntegrationDefinition">Definition</a></li>
@@ -155,10 +156,11 @@
                                     <li><a href="#IntegrationSteps">Steps</a></li>
                                     <li><a href="#IntegrationSample">Sample Test Case</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
 
                             <!-- Relational Testing Menu -->
-                            <li id="relational">
+							<li><a href="#RelationalTest">Relational Test</a></li>
+                            <!-- <li id="relational">
                                 <a href="" id="relational-toggle">Relational Testing</a>
                                 <ul id="relational-id" class="submenu" style="display: none;">
                                     <li><a href="#RelationalDefinition">Definition</a></li>
@@ -167,10 +169,22 @@
                                     <li><a href="#RelationalSteps">Steps</a></li>
                                     <li><a href="#RelationalSample">Sample Test Case</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
 
-                            <!-- System Testing Menu -->
-                            <li id="system">
+                            <!-- Feature Testing Menu -->
+							<li><a href="#FeatureTest">Feature Test</a></li>
+
+							<!-- System Testing Menu -->
+							<li><a href="#SystemTest">System Test</a></li>
+
+							<!-- Risk and challenges Menu -->
+							<li><a href="#Risk">Risks & Challenges</a></li>
+
+							<!-- Expertise Menu -->
+							<li><a href="#Expertise">Expertise & Efficiency</a></li>
+
+
+                            <!-- <li id="system">
                                 <a href="" id="system-toggle">System Testing</a>
                                 <ul id="system-id" class="submenu" style="display: none;">
                                     <li><a href="#SystemDefinition">Definition</a></li>
@@ -179,10 +193,10 @@
                                     <li><a href="#SystemSteps">Steps</a></li>
                                     <li><a href="#SystemSample">Sample Test Case</a></li>
                                 </ul>
-                            </li>							
+                            </li>							 -->
 
 							<!-- Conclusion -->
-							<li><a href="#Conclusion">Conclusion</a></li>
+							<!-- <li><a href="#Conclusion">Conclusion</a></li> -->
 						</ul>
 					</aside>
 				</div>
@@ -212,17 +226,278 @@
 						</Section>
 						
 						<!-- Introduction -->
-						<Section id="Introduction" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+						<Section id="Introduction">
 							<h1><strong>What is Manual Testing?</strong></h1>
-							<p align=justify>このトレーニングマニュアルは、新しい開発者が当社の開発プロセス、ツール、ベストプラクティスに迅速に適応できるよう設計されています。コーディング標準、バージョン管理、アジャイル手法、セキュリティ対策に関する体系的なガイダンスを提供することで、開発の一貫性と効率性を確保し、スムーズなワークフローを実現します。特に、当社の開発環境に特化したベストプラクティスを明確に示すことで、新しい開発者が戸惑うことなく業務に取り組めるよう配慮しています。</p>
-                            <p align = justify>このマニュアルに従うことで、開発者は学習曲線を短縮し、スキルの習得を加速させるとともに、生産性の向上が期待できます。また、チームとの円滑な連携が促進されることで、プロジェクト全体の品質向上にも貢献します。さらに、統一された開発手法を採用することで、エラーの削減や保守性の向上が図られ、長期的な視点でのソフトウェア開発の効率化にも寄与します。本マニュアルを活用し、スムーズなオンボーディングと継続的な成長を実現してください。</p>							
+							<p align="justify">Manual testing is a process where testers manually execute test cases without automation tools to verify software functionality. It ensures the application meets business and user requirements. Testers check usability, performance, security, and overall system behavior. Common types include integration, relational, feature, and system testing. It helps detect UI and usability issues. Manual testing is useful for exploratory, ad-hoc, and early-stage testing. It ensures data integrity, correct system interactions, and smooth user experiences. Testers follow predefined test cases and document defects. It requires analytical skills, attention to detail, and knowledge of databases and APIs. Manual testing is crucial for delivering a stable and high-quality application.
+							</p>
+
+							<p style="margin-top: 20px;">This document provides a structured manual testing guideline focusing on -</p>
+							<ol>
+								<li>Integration Testing</li>
+								<li>Releational Testing</li>
+								<li>System Testing</li>
+							</ol>
+							<p align="justify" style="margin-top: 20px;">It ensures that new testers can efficiently understand, execute and validate test cases to guarantee the stability and reliability of the application.</p>
+							
 						</Section>
 
                         <!-- Integration Testing Definition -->
-						<Section id="IntegrationDefinition" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
-                            <h1><strong>Definition</strong></h1>
+						<Section id="IntegrationTest">
+                            <h1 style="margin-bottom: 20px;"><strong>Integration Testing</strong></h1>
+							<h3><strong>Definition</strong></h3>
                             <p align="justify">Integration testing verifies the interaction between different modules of the application to ensure they work together as expected. This testing phase detects defects in data flow, API calls, and communication between components.</p>
+							<h3><strong>Purpose</strong></h3>
+							<ul>
+								<li>To ensure seamless communication between integrated modules</li>
+								<li>To detect interface mismatch between different components</li>
+								<li>To varify data flow between modules</li>
+								<li>To validate API calls</li>
+							</ul>
+							<h3><strong>Pre-condition</strong></h3>
+							<ul>
+								<li>Unit testing done for each modules</li>
+								<li>Cofigured database</li>
+								<li>API endpoints configured and documented</li>
+								<li>Stable test information that reflects production environment</li>
+							</ul>
+							<h3><strong>Execution steps</strong></h3>
+							<ul>
+								<li>Identify the integrated modules in system</li>
+								<li>Define the inputs and expected outputs for the integrate modules</li>
+								<li>Prepare the possible test cases and check accordingly</li>
+								<li>Validate the outputs and records the defects if any</li>
+								<li>Retest after solving the defects</li>
+							</ul>
+							<h3><strong>Test case example</strong></h3>
+							<table style="width: 100%; text-align: center;">
+								<tr style="font-weight: bold ;">
+									<th>#</th>
+									<th>Features</th>
+									<th>Related features</th>
+									<th>Pre-condiotions</th>
+									<th>Test steps</th>
+									<th>Expected results</th>
+									<th>Pass / Fail</th>					
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Site Registration</td>
+									<td>Planner Login</td>
+									<td>Enter valid credentials</td>
+									<td>Successfully login</td>
+									<td>Display site registration page</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Site Registration</td>
+									<td>N/A</td>
+									<td>Successfully login</td>
+									<td>Enter unique site domain</td>
+									<td>Unique site domain registered</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Site Registration</td>
+									<td>N/A</td>
+									<td>Successfully login</td>
+									<td>Select license source from pulldown option</td>
+									<td>License source selected</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+							</table>
                         </Section>
+
+						<!-- Relational Testing Definition -->
+						<Section id="RelationalTest">
+							<h1 style="margin-bottom: 20px;"><strong>Relational Testing</strong></h1>
+							<h3><strong>Definition</strong></h3>
+                            <p align="justify">Relational testing ensures that data integrity and relationships between various database entities are maintained correctly. It is crucial for verifying foreign key constraints, cascading updates, and data consistency.</p>
+							<h3><strong>Purpose</strong></h3>
+							<ul>
+								<li>To ensure relationship in database tables</li>
+								<li>To verify foreign key constraints</li>
+								<li>To check cascading delete and update operations</li>
+								<li>To prevent data integrity issues</li>
+							</ul>
+							<h3><strong>Pre-condition</strong></h3>
+							<ul>
+								<li>Properly database designed</li>
+								<li>Test data should be inserted before execution</li>
+								<li>Defined data tables relationships</li>
+							</ul>
+							<h3><strong>Execution steps</strong></h3>
+							<ul>
+								<li>Identify key relationships between database tables</li>
+								<li>Design test cases to validate relational constraints</li>
+								<li>Execute CRUD (Create, Read, Update, Delete) operations and verify integrity</li>
+								<li>Record defects if data inconsistencies are found</li>
+								<li>Re-execute tests after issue resolution</li>
+							</ul>
+							<h3><strong>Test case example</strong></h3>
+							<table style="width: 100%; text-align: center;">
+								<tr style="font-weight: bold ;">
+									<th>#</th>
+									<th>Test Scenarios</th>
+									<th>Test steps</th>
+									<th>Expected results</th>
+									<th>Pass / Fail</th>					
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Verify foreign key constraints in site table</td>
+									<td>Try to register a site with a invalid field</td>
+									<td>System should prevent insertion</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Verify cascading delete in site table</td>
+									<td>Delete a site record</td>
+									<td>Related site should be deleted</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+							</table>
+						</Section>
+
+						<!-- Feature  Testing Definition -->
+						<Section id="FeatureTest">
+							<h1 style="margin-bottom: 20px;"><strong>Feature Testing</strong></h1>
+							<h3><strong>Definition</strong></h3>
+                            <p align="justify">Feature testing is a software testing process that ensures specific features of an application function as intended. It validates that the feature meets both functional and business requirements.</p>
+							<h3><strong>Purpose</strong></h3>
+							<ul>
+								<li>To verify that the implemented feature meets business and user requirements</li>
+								<li>To ensure that the feature functions correctly under different scenarios</li>
+								<li>To detect defects related to usability, functionality, and performance</li>
+								<li>To validate feature interactions with other modules</li>
+							</ul>
+							<h3><strong>Pre-condition</strong></h3>
+							<ul>
+								<li>The feature should be fully developed and ready for testing</li>
+								<li>All dependencies, such as databases and APIs, should be available and functional</li>
+								<li>The test environment should closely resemble the production setup</li>
+								<li>Test cases should be well-defined with expected outcomes</li>
+							</ul>
+							<h3><strong>Execution steps</strong></h3>
+							<ul>
+								<li>Identify the feature to be tested</li>
+								<li>Define test cases based on functional and business requirements</li>
+								<li>Execute the test cases and analyze the results</li>
+								<li>Record and report defects if any discrepancies are found</li>
+								<li>Retest after defect resolution to ensure expected functionality</li>
+							</ul>
+							<h3><strong>Test case example</strong></h3>
+							<table style="width: 100%; text-align: center;">
+								<tr style="font-weight: bold ;">
+									<th>#</th>
+									<th>Step details</th>
+									<th>Expected results</th>
+									<th>Actual results</th>
+									<th>Pass / Fail</th>					
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Navigate to the Planner Login page</td>
+									<td>Planner Login page is displayed with input fields for 'Planner ID' and 'Password', along with Clear and Login buttons</td>
+									<td>As expected</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Leave both input fields empty and click the Login button</td>
+									<td>Error messages 'Planner ID is required' and 'Password is required' are displayed, and input fields have red borders</td>
+									<td>As expected</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+							</table>
+						</Section>
+
+						<!-- System Testing Definition -->
+						<Section id="SystemTest">
+							<h1 style="margin-bottom: 20px;"><strong>System Testing</strong></h1>
+							<h3><strong>Definition</strong></h3>
+                            <p align="justify">System testing is a high-level testing phase that validates the complete and fully integrated application to ensure it meets the specified requirements. This testing phase checks the system’s overall behavior, functionality, security, performance, and compliance.</p>
+							<h3><strong>Purpose</strong></h3>
+							<ul>
+								<li>To verify that the entire system functions as expected</li>
+								<li>To ensure compliance with business and functional requirements</li>
+								<li>To validate system interactions with external components</li>
+								<li>To test end-to-end business flows</li>
+								<li>To identify performance, security, and usability issues</li>
+							</ul>
+							<h3><strong>Pre-condition</strong></h3>
+							<ul>
+								<li>All modules should be successfully integrated</li>
+								<li>Integration testing should be completed without major defects</li>
+								<li>The test environment should mirror the production environment</li>
+								<li>Test data should be prepared for various test scenarios</li>
+								<li>Functional, performance, and security requirements should be well-defined</li>
+							</ul>
+							<h3><strong>Execution steps</strong></h3>
+							<ul>
+								<li>Requirement Analysis – Understand the functional and non-functional requirements of the system</li>
+								<li>Test Planning – Define test objectives, scope, resources, and schedule</li>
+								<li>Test Case Development – Prepare detailed test cases covering all system aspects</li>
+								<li>Test Environment Setup – Ensure the testing environment is configured properly</li>
+								<li>Test Execution – Execute test cases and document the results</li>
+								<li>Defect Logging & Reporting – Identify, log, and track defects until resolution</li>
+								<li>Regression Testing – Retest the system after defect fixes to ensure stability</li>
+								<li>Final Validation & Sign-Off – Validate test results and prepare a final report</li>
+							</ul>
+							<h3><strong>Test case example</strong></h3>
+							<table style="width: 100%; text-align: center;">
+								<tr style="font-weight: bold ;">
+									<th>#</th>
+									<th>Features</th>
+									<th>Related features</th>
+									<th>Pre-condiotions</th>
+									<th>Test steps</th>
+									<th>Expected results</th>
+									<th>Pass / Fail</th>					
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Planner Login</td>
+									<td>Navigate to valid URL</td>
+									<td>Browse with the proper URL in browser</td>
+									<td>Redirect to Planner Login page</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Planner Login</td>
+									<td>Navigate to valid URL</td>
+									<td>Browse with an invalid URL in browser</td>
+									<td>Don't redirect to target destination</td>
+									<td style="color: green;">Pass</td>
+								</tr>
+							</table>
+						</Section>
+
+						<!-- Risk & Challenges -->
+						<section id="Risk">
+							<h1><strong>Risks & Challenges In Testing</strong></h1>
+							<ul>
+								<li><strong>Complex integration scenarios</strong> may require extensive debugging</li>
+								<li><strong>Database inconsistencies</strong> could lead to application failures</li>
+								<li><strong>Dynamic data dependencies</strong> make it challenging to define static test cases</li>
+								<li><strong>High maintenance effort</strong> for constantly evolving software</li>
+							</ul>
+						</section>
+
+						<!-- Expertise & Efficiency -->
+						<section id="Expertise">
+							<h1><strong>Tester's Expertise & Efficiency</strong></h1>
+							<ul>
+								<li><strong>Technical Knowledge:</strong> Understanding of SQL, API, and debugging tools</li>
+								<li><strong>Analytical Skills:</strong> Ability to analyze and break down complex scenarios</li>
+								<li><strong>Attention to Detail:</strong> Identifying hidden defects</li>
+								<li><strong>Automation Awareness:</strong> Understanding when and how to implement automated tests</li>								
+								<li><strong>Efficiency in Execution:</strong> Optimizing test case execution for time efficiency</li>								
+							</ul>
+						</section>
 
 						<!-- Conclusion -->
 						<Section id="Conclusion" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
