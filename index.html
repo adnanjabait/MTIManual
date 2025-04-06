@@ -151,23 +151,9 @@
 							<!--Purpose-->
 							<li><a href="#ExpectedResults">Expected Results</a></li>
 
-							<!--Checklist-->
-							<!-- <li id="Checklist" style="background: url(css/img/back-to-buttom.png) no-repeat scroll right center rgba(0, 0, 0, 0); padding-bottom: 5px;">
-								<a href="#">Checklist</a>
-								<ul id="Checklist_id" class="item-hide">
-									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
-									<li><a href="#SoftSkillTraining">Soft Skill Training</a></li>									
-								</ul>
-							</li>							 -->
-							<!-- <li id="Checklist" style="background: url(css/img/back-to-buttom.png) no-repeat scroll right center rgba(0, 0, 0, 0); padding-bottom: 5px;">Checklist								
-								<ul id="Checklist_id" style="display:none;">									
-									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
-									<li><a href="#SoftSkillTraining">Soft Skill Training</a></li>									
-								</ul>
-							</li>	 -->
 							<!-- Checklist Menu -->
 							<li id="Checklist">
-								<a href="" id="Checklist_toggle">Checklist</a>
+								<a href="" id="Checklist_toggle" >Checklist</a>
 								<ul id="Checklist_id" class="submenu" style="display:none;">
 									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
 									<li><a href="#SoftSkillTraining">Soft Skill Training</a></li>
@@ -187,7 +173,7 @@
 								<a href="" id="manuals-toggle">Training Manuals</a>
 								<ul id="manuals-id" class="submenu" style="display:none;">
 									<li><a href="./manual/pm.html" target="_blank">PM Training Manual</a></li>
-									<li><a href="" target="_blank">PL Training Manual</a></li>
+									<li><a href="./manual/pl.html" target="_blank">PL Training Manual</a></li>
 									<li><a href="./manual/test.html" target="_blank">Test Manual</a></li>
 								</ul>
 							</li>
@@ -1742,18 +1728,24 @@
 	// Toggle Checklist Submenu
 	$("#Checklist_toggle").click(function (e) {
 		e.preventDefault();
+		$("#manuals-id").hide();
+		$("#material-id").hide();
 		$("#Checklist_id").slideToggle();
 	});
 
 	// Toggle Study Material Submenu
 	$("#material-toggle").click(function (e) {
 		e.preventDefault();
+		$("#Checklist_id").hide();
+		$("#manuals-id").hide();
 		$("#material-id").slideToggle();
 	});
 
 	// Toggle Training Manual Submenu
 	$("#manuals-toggle").click(function (e) {
 		e.preventDefault();
+		$("#Checklist_id").hide();
+		$("#material-id").hide();
 		$("#manuals-id").slideToggle();
 	});
 </script>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Manual - Project Lead</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="../css/style.css" type="text/css"  media="all">
+    <link rel="stylesheet" href="../css/custome.css" type="text/css"  media="all">
+    <link rel="stylesheet" href="../css/print.css" type="text/css"  media="print">
+    <link href="http://fonts.googleapis.com/css?family=Yu Gothic:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+    <script type="text/javascript" src="../js/jquery.min.js" ></script>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en', includedLanguages: 'ja,en', autoDisplay: false}, 
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <style>
+		/* General Styles */
+		body {
+			font-family: 'Roboto', sans-serif, 'Yu Gothic', 'YuGothic';
+			line-height: 1.6;
+			color: #333;
+		}
+
+		/* Increase font size for normal list items */
+		ul li, ol li,a {
+			font-size: 14px; 
+			margin-bottom: 10px;
+		}
+
+        th, td {
+            padding: 5px;
+        }
+
+		/* Style for checklist headers */
+		.checklist_header {
+			font-size: 18px; /* Slightly larger for headers */
+			font-weight: bold;
+			color: #2c3e50;
+		}
+
+		/* Add some padding and margin to sections */
+		section {
+			margin-bottom: 30px;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Style for links */
+		a {
+			color: #3498db;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		/* Style for checkboxes */
+		input[type="checkbox"] {
+			margin-right: 10px;
+		}
+
+		/* Style for the side menu */
+		/* #side-nav {
+			background-color: #2c3e50;
+			padding: 20px;
+			border-radius: 8px;
+			color: #fff;
+		}
+
+		#side-nav a {
+			color: #fff;
+		}
+
+		#side-nav a:hover {
+			color: #3498db;
+		} */
+
+		/* Style for the header */
+		#header-sm {
+			background-color: #3498db;
+			color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			margin-bottom: 20px;
+		}
+
+		#header-sm h4, #header-sm h5 {
+			margin: 0;
+		}
+
+		/* Style for the main content */
+		/* #wrap {
+			padding: 20px;
+		} */
+		#wrap {
+			display: none; /* Hide content initially */
+		}
+
+		/* Style for the footer */
+		.white-space {
+			height: 50px;
+		}
+	</style>
+
+    <!-- Loader -->
+	<div id="loader">
+		<img src="../image/loader.gif" alt="Loading..." />
+	</div>
+	<!-- START-BODY WRAP CONTENT -->	
+	<div id="wrap" class="colorskin-0">	
+	<!-- Language Switcher -->
+    
+    <div id="google_translate_element" style="display: none;"></div> <!-- Hidden Google Translate UI -->
+
+    <div class="container">
+        <div class="row">
+
+            <!-- start side menu -->
+             <div class="col-md-3" id="sticky-sidebar">
+                <div class="logo"><img src="../image/mti-logo.png" alt="Logo" id="img-logo"></div>
+                <aside id="side-nav">
+                    <ul id="top-menu">
+                        <li style="padding: 5px; cursor: pointer; color: #3498db;" onclick="window.close();">← Back</li>
+                        <li><a href="#Home">ホーム</a></li>
+                        <li><a href="#Introduction">Introduction</a></li>
+                        <li><a href="#responsibilities">Key responsibilites</a></li>
+                        <li><a href="#skill">Required Skills</a></li>
+                        <li><a href="#workflow">Daily Workflow</a></li>
+                        <li><a href="#practices">Best Practices</a></li>
+                        <li><a href="#duties">Weekly / Monthly responsibilites</a></li>
+                        <li><a href="#tools">Tools Familiarity</a></li>                        
+                        <li><a href="#checklist">Onboarding Checklist</a></li>                        
+                        <li><a href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </aside>
+             </div>
+             <div class="col-md-9">
+                <div id="header" class="row">								
+                    <div class="col-md-8 col-md-offset-1 desc" style="text-align: left; margin: 10px 0px 0px 0px;">
+                        <h4 class="slight">PL Training Manual</h4>					
+                    </div>
+                    <div class="col-md-3" style="float: right; padding-top: 5px;">
+                        <div style="text-align: right; padding: 10px;">
+                            <!-- <label for="language-select">Language: </label> -->
+                            <select id="language-select">
+                                <option value="en">English</option>
+                                <option value="ja" selected>Japanese</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-content">
+					<!-- Home page -->
+                    <Section id="Home" style="text-align: center; padding-top: 260px; padding-bottom: 260px;">
+						<h1><strong>PL (Project Lead) Training Manual</strong></h1>
+						<h4>Prepared by: ITA</h4>
+					</Section>
+
+					<!-- Introduction -->
+					<Section id="Introduction" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Introduction</strong></h1>
+						<p align="justify">
+							A Project Lead serves as the bridge between the project manager and the development team. They are responsible for guiding, supporting, and ensuring the team performs efficiently while maintaining a healthy and positive work environment.
+						</p>						
+					</Section>
+
+					<!-- responsibilities -->
+					<Section id="responsibilities" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Key Responsibilites</strong></h1>
+
+                        <ol style="margin-top: 20px;">
+                            <li><strong>Task Management</strong></li>
+                            <ul>
+                                <li>WBS (Work Break-down Structure)project tasks into manageable units</li>
+                                <li>Assign tasks based on team member's strengths and workload</li>
+                                <li>Monitor task progress and ensure timely completion</li>
+                            </ul>
+                            <li><strong>Team Coordination</strong></li>
+                            <ul>
+                                <li>Facilitate daily stand-ups and sprint planning sessions</li>
+                                <li>Ensure smooth collaboration among developers, designers, and testers</li>
+                                <li>Track blockers and assist team members in resolving them</li>
+                            </ul>
+                            <li><strong>Technical Mentorship</strong></li>
+                            <ul>
+                                <li>Review code and enforce coding standards</li>
+                                <li>Help junior members with technical problems</li>
+                                <li>Promote best practices (e.g., code versioning, testing, CI/CD)</li>
+                            </ul>
+                            <li><strong>Performance Monitoring</strong></li>
+                            <ul>
+                                <li>Track individual and team performance</li>
+                                <li>Give regular feedback and conduct one-on-one check-ins</li>
+                                <li>Identify skill gaps and suggest training or resources</li>
+                            </ul>
+                            <li><strong>Communication</strong></li>
+                            <ul>
+                                <li>Act as the primary point of contact between the team and the project manager</li>
+                                <li>Ensure clear understanding of project goals and updates</li>
+                                <li>Document decisions, changes, and team input clearly</li>
+                            </ul>
+                            <li><strong>Conflict Resolution</strong></li>
+                            <ul>
+                                <li>Address internal team conflicts constructively</li>
+                                <li>Foster a respectful and inclusive team culture</li>
+                            </ul>
+                            <li><strong>Quality Assurance</strong></li>
+                            <ul>
+                                <li>Ensure that code and features meet quality and security standards</li>
+                                <li>Encourage peer reviews and proper testing procedures</li>
+                            </ul>
+                        </ol>
+					</Section>
+
+					<!-- skill -->
+					<Section id="skill" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Required Skills</strong></h1>
+						<table style="width: 100%; text-align: center;">
+                            <tr>
+                                <th><strong>Skill Category</strong></th>
+                                <th><strong>Description</strong></th>
+                            </tr>
+                            <tr>
+                                <td>Technical Expertise</td>
+                                <td>Proficiency in project tech stack; strong debugging and design skill</td>
+                            </tr>
+                            <tr>
+                                <td>Leadership</td>
+                                <td>Inspire and guide the team; lead by example</td>
+                            </tr>
+                            <tr>
+                                <td>Communication</td>
+                                <td>Clear and consistent communication with team and management</td>
+                            </tr>
+                            <tr>
+                                <td>Problem Solving</td>
+                                <td>Help unblock team members quickly and creatively</td>
+                            </tr>
+                            <tr>
+                                <td>Time Management</td>
+                                <td>Prioritize team workload and deliverables efficiently</td>
+                            </tr>
+                            <tr>
+                                <td>Emotional Intelligence</td>
+                                <td>Understand and support team members emotionally and professionally</td>
+                            </tr>
+                        </table>
+					</Section>
+
+					<!-- workflow -->
+					<Section id="workflow" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Daily Workflow</strong></h1>
+						<table style="width: 100%;">
+                            <tr>
+                                <th><strong>Time</strong></th>
+                                <th><strong>Activity</strong></th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">Morning</td>
+                                <td style="vertical-align: middle;">
+                                    <ul style="list-style-type: disc; margin: 0 auto; display: table;">
+                                        <li>Daily stand-up meeting (SCRUM)</li>
+                                        <li>Review task board (Jira/Trello/etc.)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">Midday</td>
+                                <td style="vertical-align: middle;">
+                                    <ul style="list-style-type: disc; margin: 0 auto; display: table;">
+                                        <li>Check progress, support developers</li>
+                                        <li>Attend cross-functional syncs</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">Afternoon</td>
+                                <td style="vertical-align: middle;">
+                                    <ul style="list-style-type: disc; margin: 0 auto; display: table;">
+                                        <li>Code review</li>
+                                        <li>Support team issues/blockers</li>
+                                        <li>Sync with PM</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">End of Day</td>
+                                <td style="vertical-align: middle;">
+                                    <ul style="list-style-type: disc; margin: 0 auto; display: table;">
+                                        <li>Document updates</li>
+                                        <li>Update PM/team on progress</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+					</Section>
+
+					<!-- practices -->
+					<Section id="practices" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Best Practices</strong></h1>
+						<ul>
+							<li>Keep stand-ups short and focused</li>
+							<li>Document everything clearly (task updates, changes, issues)</li>
+							<li>Focus on mentoring over micromanaging</li>
+							<li>Recognize and appreciate team efforts</li>
+							<li>Promote knowledge sharing (pair programming, code walkthroughs)</li>
+							<li>Maintain a balance between delivery and developer well-being</li>
+						</ul>
+					</Section>
+
+					<!-- duties -->
+					<Section id="duties" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Weekly/Monthly Responsibilities</strong></h1>
+						<table style="width: 100%;">
+                            <tr>
+                                <th><strong>Timeframe</strong></th>
+                                <th><strong>Responsibilities</strong></th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">Weekly</td>
+                                <td style="vertical-align: middle;">
+                                    <ul style="list-style-type: disc; margin: 0 auto; display: table;">
+                                        <li>Sprint planning/review</li>
+                                        <li>Team sync-up</li>
+                                        <li>Check individual progress</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">Bi-weekly</td>
+                                <td style="vertical-align: middle;">
+                                    <ul style="list-style-type: disc; margin: 0 auto; display: table;">
+                                        <li>Code quality review</li>
+                                        <li>Knowledge sharing session (internal)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">Monthly</td>
+                                <td style="vertical-align: middle;">
+                                    <ul style="list-style-type: disc; margin: 0 auto; display: table;">
+                                        <li>1-on-1 feedback sessions</li>
+                                        <li>Review team performance and goals</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+					</Section>
+
+					<!-- tools -->
+					<Section id="tools" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Tools Familiarity</strong></h1>
+						<table style="width: 100%; text-align: center;">
+                            <tr>
+                                <th><strong>Tool Type</strong></th>
+                                <th><strong>Examples</strong></th>
+                            </tr>
+                            <tr>
+                                <td>Project Management</td>
+                                <td>Jira, Asana, Trello</td>
+                            </tr>
+                            <tr>
+                                <td>Communication</td>
+                                <td>Slack, Microsoft Teams, Zoom</td>
+                            </tr>
+                            <tr>
+                                <td>Version Control</td>
+                                <td>Git, GitHub, GitLab</td>
+                            </tr>
+                            <tr>
+                                <td>CI/CD & DevOps</td>
+                                <td>GitHub Actions, Jenkins, GitLab CI/CD</td>
+                            </tr>
+                            <tr>
+                                <td>Documentation</td>
+                                <td>Confluence, Notion, Google Docs</td>
+                            </tr>
+                            <tr>
+                                <td>Monitoring/Tracking</td>
+                                <td>Sentry, New Relic, Postman (for API testing)</td>
+                            </tr>
+                        </table>
+					</Section>
+
+                    <!-- checklist -->
+                     <Section id="checklist" style="padding-top: 100px; padding-bottom: 100px;">
+                        <h1><strong>Onboarding Checklist for New Project Leads</strong></h1>
+                        <ul>
+                            <li>Understand current project status and team structure</li>
+                            <li>Review ongoing tasks, sprint boards, and milestones</li>
+                            <li>Meet each team member for a brief one-on-one</li>
+                            <li>Review documentation and tech stack</li>
+                            <li>Attend alignment meeting with Project Manager/Product Owner</li>
+                            <li>Understand escalation process and reporting structure</li>
+                        </ul>
+                     </Section>
+
+					<!-- Conclusion -->
+					<Section id="conclusion" style="padding-top: 100px; padding-bottom: 100px;">
+						<h1><strong>Conclusion</strong></h1>
+						<p align="justify">
+							Stepping into the role of a Project Lead is both a responsibility and an opportunity. As a leader, you are not just responsible for delivering high-quality work—you are also a key force in shaping the culture, morale, and growth of your team.
+						</p>
+                        <p align="justify">
+                            This manual has outlined the essential responsibilities, skills, and best practices to help you navigate the role effectively. While tools, technologies, and processes may evolve, the core principles of leadership—communication, empathy, accountability, and collaboration—remain timeless.
+                        </p>
+					</Section>
+                </div>
+             </div>
+        </div>
+    </div>
+</body>
+<script>
+	function showLoader() {
+		document.getElementById('loader').style.display = 'block'; // Show loader
+		document.getElementById('wrap').style.display = 'none'; // Hide content
+	}
+
+	// Function to hide the loader and show the content
+	function hideLoader() {
+		document.getElementById('loader').style.display = 'none'; // Hide loader
+		document.getElementById('wrap').style.display = 'block'; // Show content
+	}
+	showLoader();
+
+	// Function to Auto-Translate to Japanese
+	function translateToJapanese() {		
+		var select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = "ja";  // Set Japanese as the default translation
+			select.dispatchEvent(new Event("change"));
+		}
+		hideLoader();
+	}
+
+	// Wait for Google Translate to Load
+	setTimeout(translateToJapanese, 1000);
+
+	// Manual Language Switcher
+	document.getElementById("language-select").addEventListener("change", function() {
+		// showLoader(); // Show loader before starting translation
+		var selectedLang = this.value;
+		var select = document.querySelector(".goog-te-combo");
+		if (select) {
+			select.value = selectedLang;
+			select.dispatchEvent(new Event("change"));
+		}
+	});
+
+	// Listen for the translation to complete
+	document.addEventListener('DOMContentLoaded', function() {
+		var translateElement = document.querySelector('.goog-te-combo');
+		if (translateElement) {
+			translateElement.addEventListener('change', function() {
+				hideLoader(); // Hide loader after translation is complete
+			});
+		}
+	});
+
+    // Integration Testing Submenu
+	$("#integration-toggle").click(function (e) {
+		e.preventDefault();
+		$("#integration-id").slideToggle();
+	});
+    // Relational Testing Submenu
+	$("#relational-toggle").click(function (e) {
+		e.preventDefault();
+		$("#relational-id").slideToggle();
+	});
+    // System Testing Submenu
+	$("#system-toggle").click(function (e) {
+		e.preventDefault();
+		$("#system-id").slideToggle();
+	});
+</script>
+</html>
