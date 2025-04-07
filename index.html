@@ -7,7 +7,7 @@
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/style.css" type="text/css"  media="all">
-	<link rel="stylesheet" href="css/custome.css" type="text/css"  media="all">
+	<link rel="stylesheet" href="css/custom.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="css/print.css" type="text/css"  media="print">
 	<!--<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css"> -->
 	
@@ -113,6 +113,20 @@
 		.white-space {
 			height: 50px;
 		}
+
+		.arrow {
+			font-size: 12px;
+			margin-left: 5px;
+			transition: transform 0.3s ease;
+			display: inline-block;
+			text-align: right;
+			/* background:url("css/img/arrow_right_black.png") no-repeat scroll right center rgba(0, 0, 0, 0); */
+		}
+
+		.rotate {
+			transform: rotate(180deg);
+			/* background:url("css/img/arrow_right_yellow.png") no-repeat scroll right center rgba(0, 0, 0, 0); */
+		}
 	</style>
 </head>
 <body>
@@ -153,7 +167,10 @@
 
 							<!-- Checklist Menu -->
 							<li id="Checklist">
-								<a href="" id="Checklist_toggle" >Checklist</a>
+								<a href="" id="Checklist_toggle">
+									Checklist
+									<span class="arrow">▼</span>
+								</a>
 								<ul id="Checklist_id" class="submenu" style="display:none;">
 									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
 									<li><a href="#SoftSkillTraining">Soft Skill Training</a></li>
@@ -162,7 +179,10 @@
 
 							<!-- Study Materials Menu -->
 							<li id="material">
-								<a href="" id="material-toggle">Study Materials</a>
+								<a href="" id="material-toggle">
+									Study Materials
+									<span class="arrow">▼</span>
+								</a>
 								<ul id="material-id" class="submenu" style="display:none;">
 									<li><a href="#DevSkillDevelopment">Dev Skill Development</a></li>
 									<li><a href="#PMSkillDevelopment">PM Skill Development</a></li>
@@ -170,7 +190,10 @@
 							</li>
 
 							<li id="manuals">
-								<a href="" id="manuals-toggle">Training Manuals</a>
+								<a href="" id="manuals-toggle">
+									Training Manuals
+									<span class="arrow">▼</span>
+								</a>
 								<ul id="manuals-id" class="submenu" style="display:none;">
 									<li><a href="./manual/pm.html" target="_blank">PM Training Manual</a></li>
 									<li><a href="./manual/pl.html" target="_blank">PL Training Manual</a></li>
@@ -219,7 +242,7 @@
 						</Section>
 
 						<!--Purpose-->
-						<section id="Purpose">	
+						<section id="Purpose" style="padding-top: 100px; padding-bottom: 100px;">	
 							<br />
 							<h3><strong>目的:</strong></h3>
 							<ul>
@@ -305,7 +328,7 @@
 						</section>
 
 						<!--Purpose-->
-						<section id="ExpectedResults">	
+						<section id="ExpectedResults"  style="padding-top: 100px; padding-bottom: 100px;">	
 							<br />
 							<h3><strong> 期待される結果（個々の開発者のメリット）:</strong></h3>
 							<ul>
@@ -392,7 +415,7 @@
 						</section>
 						
 						<!--START-INTRODUCTION-->				
-						<section id="TechnicalSkillTraining">			
+						<section id="TechnicalSkillTraining"  style="padding-top: 100px; padding-bottom: 100px;">			
 							<hr class="vertical-space2">				
 							<h3><strong>Checklist</strong></h3>
 							<h4><strong>Technical Skill Training</strong></h4>
@@ -640,7 +663,7 @@
 							</ol>					
 						</section>					
 
-						<section id="SoftSkillTraining">						          													
+						<section id="SoftSkillTraining" style="padding-top: 100px; padding-bottom: 100px;">						          													
 							<h4><strong>Soft Skill Training </strong></h4>		
 							<ol>
 								<li>
@@ -804,7 +827,7 @@
 							</ol>										
 						</section>
 
-						<section id="DevSkillDevelopment">
+						<section id="DevSkillDevelopment" style="padding-top: 100px; padding-bottom: 100px;">
 							<h3><strong>Dev Skill Development Materials</strong></h1>
 							<table style="width: 100%; text-align: center;">
 								<tr style="font-weight: bold ;">
@@ -1165,7 +1188,7 @@
 							</table>
 						</section>
 
-						<section id="PMSkillDevelopment">
+						<section id="PMSkillDevelopment" style="padding-top: 100px; padding-bottom: 100px;">
 							<h3><strong>PM (Project Management) Skill Development Materials</strong></h1>
 								<table style="width: 100%; text-align: center;">
 									<tr style="font-weight: bold ;">
@@ -1730,7 +1753,13 @@
 		e.preventDefault();
 		$("#manuals-id").hide();
 		$("#material-id").hide();
+
+		$("#manuals-toggle .arrow").removeClass("rotate");
+		$("#material-toggle .arrow").removeClass("rotate");
+
 		$("#Checklist_id").slideToggle();
+
+		$("#Checklist_toggle .arrow").toggleClass("rotate");
 	});
 
 	// Toggle Study Material Submenu
@@ -1738,7 +1767,13 @@
 		e.preventDefault();
 		$("#Checklist_id").hide();
 		$("#manuals-id").hide();
+
+		$("#Checklist_toggle .arrow").removeClass("rotate");
+		$("#manuals-toggle .arrow").removeClass("rotate");
+
 		$("#material-id").slideToggle();
+
+		$("#material-toggle .arrow").toggleClass("rotate");
 	});
 
 	// Toggle Training Manual Submenu
@@ -1746,7 +1781,13 @@
 		e.preventDefault();
 		$("#Checklist_id").hide();
 		$("#material-id").hide();
+
+		$("#Checklist_toggle .arrow").removeClass("rotate");
+		$("#material-toggle .arrow").removeClass("rotate");
+
 		$("#manuals-id").slideToggle();
+
+		$("#manuals-toggle .arrow").toggleClass("rotate");
 	});
 </script>
 </html>
