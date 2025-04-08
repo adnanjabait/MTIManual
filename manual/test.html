@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title>Training Manual - Quality Testing</title>
+	<title>Training Manual - Quality Control</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -135,11 +135,23 @@
 				<!--START-SIDE MENU-->
 				<div class="col-md-3" id="sticky-sidebar">
 					<div class="logo"> <img src="../image/mti-logo.png"  id="img-logo" alt="logo"> </div>
+					<div id="side-nav">
+						<ul id="main-menu">
+							<li><a href="../index.html">General Skill Development</a></li>
+							<li><a href="pm.html" >PM Skill Development</a></li>
+							<li><a href="pl.html" >PL Skill Development</a></li>
+							<li><a class="selected">Quality Control Skill Development</a></li>
+						</ul>
+					</div>
 					<aside id="side-nav">						
 						
 						<ul id="top-menu">
-							<li style="padding: 5px; cursor: pointer; color: #3498db;" onclick="window.close();">← Back</li>
-                        	<li><a href="#Home">ホーム</a></li>
+							<li>
+								<div id="navigator">
+									Training Manual > Quality Control
+								</div>
+							</li>
+							<li><a href="#Home">ホーム</a></li>
 							<li><a href="#Introduction">What is Manual Testing?</a></li>
 							<li><a href="#IntegrationTest">Integration Test</a></li>
 							<li><a href="#RelationalTest">Relational Test</a></li>
@@ -176,7 +188,7 @@
 						</Section>
 						
 						<!-- Introduction -->
-						<Section id="Introduction">
+						<Section id="Introduction" style="padding-top: 100px; padding-bottom: 100px;">
 							<h1><strong>What is Manual Testing?</strong></h1>
 							<p align="justify">Manual testing is a process where testers manually execute test cases without automation tools to verify software functionality. It ensures the application meets business and user requirements. Testers check usability, performance, security, and overall system behavior. Common types include integration, relational, feature, and system testing. It helps detect UI and usability issues. Manual testing is useful for exploratory, ad-hoc, and early-stage testing. It ensures data integrity, correct system interactions, and smooth user experiences. Testers follow predefined test cases and document defects. It requires analytical skills, attention to detail, and knowledge of databases and APIs. Manual testing is crucial for delivering a stable and high-quality application.
 							</p>
@@ -192,7 +204,7 @@
 						</Section>
 
                         <!-- Integration Testing Definition -->
-						<Section id="IntegrationTest">
+						<Section id="IntegrationTest" style="padding-top: 100px; padding-bottom: 100px;">
                             <h1 style="margin-bottom: 20px;"><strong>Integration Testing</strong></h1>
 							<h3><strong>Definition</strong></h3>
                             <p align="justify">Integration testing verifies the interaction between different modules of the application to ensure they work together as expected. This testing phase detects defects in data flow, API calls, and communication between components.</p>
@@ -260,7 +272,7 @@
                         </Section>
 
 						<!-- Relational Testing Definition -->
-						<Section id="RelationalTest">
+						<Section id="RelationalTest" style="padding-top: 100px; padding-bottom: 100px;">
 							<h1 style="margin-bottom: 20px;"><strong>Relational Testing</strong></h1>
 							<h3><strong>Definition</strong></h3>
                             <p align="justify">Relational testing ensures that data integrity and relationships between various database entities are maintained correctly. It is crucial for verifying foreign key constraints, cascading updates, and data consistency.</p>
@@ -312,7 +324,7 @@
 						</Section>
 
 						<!-- Feature  Testing Definition -->
-						<Section id="FeatureTest">
+						<Section id="FeatureTest" style="padding-top: 100px; padding-bottom: 100px;">
 							<h1 style="margin-bottom: 20px;"><strong>Feature Testing</strong></h1>
 							<h3><strong>Definition</strong></h3>
                             <p align="justify">Feature testing is a software testing process that ensures specific features of an application function as intended. It validates that the feature meets both functional and business requirements.</p>
@@ -365,7 +377,7 @@
 						</Section>
 
 						<!-- System Testing Definition -->
-						<Section id="SystemTest">
+						<Section id="SystemTest" style="padding-top: 100px; padding-bottom: 100px;">
 							<h1 style="margin-bottom: 20px;"><strong>System Testing</strong></h1>
 							<h3><strong>Definition</strong></h3>
                             <p align="justify">System testing is a high-level testing phase that validates the complete and fully integrated application to ensure it meets the specified requirements. This testing phase checks the system’s overall behavior, functionality, security, performance, and compliance.</p>
@@ -427,7 +439,7 @@
 						</Section>
 
 						<!-- Risk & Challenges -->
-						<section id="Risk">
+						<section id="Risk" style="padding-top: 100px; padding-bottom: 100px;">
 							<h1><strong>Risks & Challenges In Testing</strong></h1>
 							<ul>
 								<li><strong>Complex integration scenarios</strong> may require extensive debugging</li>
@@ -438,7 +450,7 @@
 						</section>
 
 						<!-- Expertise & Efficiency -->
-						<section id="Expertise">
+						<section id="Expertise" style="padding-top: 100px; padding-bottom: 100px;">
 							<h1><strong>Tester's Expertise & Efficiency</strong></h1>
 							<ul>
 								<li><strong>Technical Knowledge:</strong> Understanding of SQL, API, and debugging tools</li>

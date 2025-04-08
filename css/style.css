@@ -18,7 +18,7 @@
 	/* WRAPPER */ 
 	
 	#wrap { margin: 0 auto; position: relative; padding: 0; background: #fff; 
-	max-width:1300px; -webkit-box-shadow: 0 0 9px rgba(0,0,0,0.4); -moz-box-shadow: 0 0 7px rgba(0,0,0,0.4); box-shadow: 0 0 7px rgba(0,0,0,0.4); }
+	max-width:1500px; -webkit-box-shadow: 0 0 9px rgba(0,0,0,0.4); -moz-box-shadow: 0 0 7px rgba(0,0,0,0.4); box-shadow: 0 0 7px rgba(0,0,0,0.4); }
 	#header { border-bottom: 4px solid #f3f3f3; background: #fff; width: 100% }
 	#header .desc { margin-top:20px }
 	.logo {margin-top:10px;text-align: center;
@@ -45,17 +45,28 @@
 	/* #side-nav a:after { float:right;  font-family: 'icomoon'; font-size:8px; color:#878787; content: "\e3b0"; speak: none; font-style: normal; font-weight: normal; text-transform: none; line-height: 3; -webkit-font-smoothing: antialiased; } */
 	#side-nav a:hover{ 
 		color:#FF9933;
-		/* background:url("img/arrow_right_yellow.png") no-repeat scroll right center rgba(0, 0, 0, 0); */
+		text-decoration: none;
 	}
 	#side-nav .active a{
 		color:#FF9933;
-		/* background:url("img/arrow_right_yellow.png") no-repeat scroll right center rgba(0, 0, 0, 0); */
 	}
 	
 	#side-nav ul li > ul { display:block; padding-left: 20px;}
 	li#client_click { margin-top: 6px!important;}
     li#employee_click { margin-top: 6px!important;}
     li#admin {margin-top: 6px!important;}
+
+	#main-menu .selected { background-color: lightgray; }
+
+	#navigator {
+		padding-bottom: 10px;
+		text-transform: capitalize;
+		font-size: 15px;
+		font-weight: 600;
+		letter-spacing: 0.2px;
+		text-align: center;
+	}
+	
 	
 
 	

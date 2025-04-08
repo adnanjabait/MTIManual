@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="css/custom.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="css/print.css" type="text/css"  media="print">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css"> -->
 	
 	<link href="http://fonts.googleapis.com/css?family=Yu Gothic:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css">
@@ -149,9 +150,22 @@
 				<!--START-SIDE MENU-->
 				<div class="col-md-3" id="sticky-sidebar">
 					<div class="logo"> <img src="image/mti-logo.png"  id="img-logo" alt="logo"> </div>
+					<div id="side-nav">
+						<ul id="main-menu">
+							<li><a class="selected">General Skill Development</a></li>
+							<li><a href="./manual/pm.html" >PM Skill Development</a></li>
+							<li><a href="./manual/pl.html" >PL Skill Development</a></li>
+							<li><a href="./manual/test.html" >Quality Control Skill Development</a></li>
+						</ul>
+					</div>
 					<aside id="side-nav">						
 						
 						<ul id="top-menu">
+							<li>
+								<div id="navigator">
+									Skill Development > General Skills
+								</div>
+							</li>
 							
 							<!-- Home -->
 							<li><a href="#Home">ホーム</a></li>
@@ -169,7 +183,7 @@
 							<li id="Checklist">
 								<a href="" id="Checklist_toggle">
 									Checklist
-									<span class="arrow">▼</span>
+									<i class="fa fa-angle-down arrow" style="font-size:20px"></i>
 								</a>
 								<ul id="Checklist_id" class="submenu" style="display:none;">
 									<li><a href="#TechnicalSkillTraining">Technical Skill Training</a></li>
@@ -181,26 +195,13 @@
 							<li id="material">
 								<a href="" id="material-toggle">
 									Study Materials
-									<span class="arrow">▼</span>
+									<i class="fa fa-angle-down arrow" style="font-size:20px"></i>
 								</a>
 								<ul id="material-id" class="submenu" style="display:none;">
 									<li><a href="#DevSkillDevelopment">Dev Skill Development</a></li>
 									<li><a href="#PMSkillDevelopment">PM Skill Development</a></li>
 								</ul>
 							</li>
-
-							<li id="manuals">
-								<a href="" id="manuals-toggle">
-									Training Manuals
-									<span class="arrow">▼</span>
-								</a>
-								<ul id="manuals-id" class="submenu" style="display:none;">
-									<li><a href="./manual/pm.html" target="_blank">PM Training Manual</a></li>
-									<li><a href="./manual/pl.html" target="_blank">PL Training Manual</a></li>
-									<li><a href="./manual/test.html" target="_blank">Test Manual</a></li>
-								</ul>
-							</li>
-
 							<!-- Introduction -->
 							<li><a href="#Conclusion">Conclusion</a></li>
 						</ul>
@@ -1751,10 +1752,8 @@
 	// Toggle Checklist Submenu
 	$("#Checklist_toggle").click(function (e) {
 		e.preventDefault();
-		$("#manuals-id").hide();
 		$("#material-id").hide();
 
-		$("#manuals-toggle .arrow").removeClass("rotate");
 		$("#material-toggle .arrow").removeClass("rotate");
 
 		$("#Checklist_id").slideToggle();
@@ -1766,28 +1765,12 @@
 	$("#material-toggle").click(function (e) {
 		e.preventDefault();
 		$("#Checklist_id").hide();
-		$("#manuals-id").hide();
 
 		$("#Checklist_toggle .arrow").removeClass("rotate");
-		$("#manuals-toggle .arrow").removeClass("rotate");
 
 		$("#material-id").slideToggle();
 
 		$("#material-toggle .arrow").toggleClass("rotate");
-	});
-
-	// Toggle Training Manual Submenu
-	$("#manuals-toggle").click(function (e) {
-		e.preventDefault();
-		$("#Checklist_id").hide();
-		$("#material-id").hide();
-
-		$("#Checklist_toggle .arrow").removeClass("rotate");
-		$("#material-toggle .arrow").removeClass("rotate");
-
-		$("#manuals-id").slideToggle();
-
-		$("#manuals-toggle .arrow").toggleClass("rotate");
 	});
 </script>
 </html>
