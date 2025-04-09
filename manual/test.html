@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="../css/custom.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="../css/print.css" type="text/css"  media="print">
 	<!--<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css"> -->
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Yu Gothic:100,300,400,500,700|Roboto+Slab:300,400"  rel="stylesheet" type="text/css">
 	
 	<script type="text/javascript" src="../js/jquery.min.js" ></script>
@@ -137,12 +137,15 @@
 					<div class="logo"> <img src="../image/mti-logo.png"  id="img-logo" alt="logo"> </div>
 					<div id="side-nav">
 						<ul id="main-menu">
-							<li><a href="../index.html">General Skill Development</a></li>
-							<li><a href="../material/dev.html" >Dev Skill Development Study Materials</a></li>
-							<li><a href="pm.html" >PM Skill Development</a></li>
-							<li><a href="../material/pm.html" >PM Skill Development Study Materials</a></li>
-							<li><a href="pl.html" >PL Skill Development</a></li>
-							<li><a class="selected">Quality Control Skill Development</a></li>
+							<li><a href="../index.html" class="menu-item">General Skill Development</a></li>
+							<li><a href="pm.html" class="menu-item">PM Skill Development</a></li>
+							<li><a href="pl.html" class="menu-item">PL Skill Development</a></li>
+							<li>
+								<a class="menu-item selected">
+									Quality Control Skill Development
+									<i class="fa fa-angle-down" id="down-arrow"></i>
+								</a>
+							</li>
 						</ul>
 					</div>
 					<aside id="side-nav">						
@@ -522,6 +525,21 @@
 			translateElement.addEventListener('change', function() {
 				hideLoader(); // Hide loader after translation is complete
 			});
+		}
+	});
+
+	const $menu = $('#main-menu');
+	const $allitems = $('.menu-item');
+	const $activemenu = $('.menu-item.selected');
+
+	$allitems.not('.selected').hide();
+	$activemenu.click(function() {
+		if($menu.find('.menu-item:visible').length > 1){
+			$allitems.not('.selected').slideUp();
+			$('#down-arrow').show();
+		} else {
+			$('#down-arrow').hide();
+			$allitems.slideDown();
 		}
 	});
 </script>

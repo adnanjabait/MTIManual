@@ -57,6 +57,18 @@
     li#admin {margin-top: 6px!important;}
 
 	#main-menu .selected { background-color: lightgray; }
+	#main-menu li a {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#down-arrow {
+		font-size: 20px;
+		padding-right: 5px;
+		transition: transform 0.3s ease;
+		display: inline-block;
+		text-align: right;			
+	}
 
 	#navigator {
 		padding-bottom: 10px;
